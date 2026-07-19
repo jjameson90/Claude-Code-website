@@ -3,185 +3,196 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ISBRE — Tusen år på vei til deg</title>
-<meta name="description" content="ISBRE — smeltevann fra norske breer. En scroll-film: fra nordlyshimmelen, gjennom snøen, inn i isen, ned til dråpen — til flasken.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg stroke='%23A9D9F2' stroke-width='1.4' fill='none'%3E%3Cpath d='M12 2v20M12 2l-2.5 3M12 2l2.5 3M12 22l-2.5-3M12 22l2.5-3'/%3E%3Cpath d='M3.3 7v0l17.4 10M3.3 7l3.9.2M3.3 7l.2 3.9M20.7 17l-3.9-.2M20.7 17l-.2-3.9'/%3E%3Cpath d='M3.3 17L20.7 7M3.3 17l.2-3.9M3.3 17l3.9.2M20.7 7l-.2 3.9M20.7 7l-3.9-.2'/%3E%3C/g%3E%3C/svg%3E">
+<title>PST Sportsanlegg — Totalleverandør av sportsanlegg</title>
+<meta name="description" content="PST Sportsanlegg bygger stedene idretten skjer: kunstgressbaner, friidrettsdekker, tennis- og padelbaner, ballbinger og stadiongjerder. Fra grus til gress — ett anlegg om gangen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='5' width='20' height='14' rx='2' fill='none' stroke='%2335C463' stroke-width='1.6'/%3E%3Cpath d='M12 5v14' stroke='%2335C463' stroke-width='1.2'/%3E%3Ccircle cx='12' cy='12' r='2.6' fill='none' stroke='%2335C463' stroke-width='1.2'/%3E%3C/svg%3E">
 <style>
-/* ============ ISBRE — scroll-film (Lane A, pure code) ============ */
-@font-face{font-family:'Unbounded';src:url('assets/fonts/unbounded-latin-200-normal.woff2') format('woff2');font-weight:200;font-display:block}
-@font-face{font-family:'Unbounded';src:url('assets/fonts/unbounded-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:block}
-@font-face{font-family:'Unbounded';src:url('assets/fonts/unbounded-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:block}
-@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:block}
-@font-face{font-family:'Manrope';src:url('assets/fonts/manrope-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:block}
-@font-face{font-family:'Newsreader';src:url('assets/fonts/newsreader-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block}
+/* ============ PST SPORTSANLEGG — scroll-film «Fra grus til gress» ============ */
+@font-face{font-family:'Anton';src:url('assets/fonts/anton-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:block}
+@font-face{font-family:'Barlow';src:url('assets/fonts/barlow-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:block}
+@font-face{font-family:'Barlow';src:url('assets/fonts/barlow-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:block}
+@font-face{font-family:'Barlow';src:url('assets/fonts/barlow-latin-800-normal.woff2') format('woff2');font-weight:800;font-display:block}
 
 :root{
-  --night:#04070D; --deep:#071626; --glacier:#0B2740; --abyss:#051B30;
-  --ice:#A9D9F2; --ice-bright:#E8F5FC; --aurora:#6FE7B7; --violet:#8FA8FF;
-  --dim:rgba(232,245,252,.55); --faint:rgba(232,245,252,.28);
-  --hair:rgba(169,217,242,.18);
-  --disp:'Unbounded',sans-serif; --body:'Manrope',sans-serif; --serif:'Newsreader',serif;
+  --pitch:#071009; --night:#050A06; --deep:#0B1A10;
+  --green:#35C463; --green-deep:#0E5A2B; --lime:#D9FF4C;
+  --line:#F2FFF4; --earth:#A08A6C; --earth-deep:#3A332B;
+  --dim:rgba(242,255,244,.6); --faint:rgba(242,255,244,.3);
+  --hair:rgba(53,196,99,.22);
+  --disp:'Anton',sans-serif; --body:'Barlow',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:auto}
-body{background:var(--night);color:var(--ice-bright);font-family:var(--body);
-  font-size:16px;line-height:1.6;overflow-x:hidden;
-  -webkit-font-smoothing:antialiased}
-::selection{background:var(--aurora);color:var(--night)}
+body{background:var(--pitch);color:var(--line);font-family:var(--body);
+  font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--lime);color:var(--night)}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.12}
-.kicker{font-family:var(--disp);font-weight:200;font-size:.62rem;letter-spacing:.42em;
-  text-transform:uppercase;color:var(--aurora)}
-.serif{font-family:var(--serif);font-style:italic}
+h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.04;
+  text-transform:uppercase;letter-spacing:.015em}
+.kicker{font-family:var(--body);font-weight:800;font-size:.66rem;letter-spacing:.4em;
+  text-transform:uppercase;color:var(--lime)}
 
 /* ---------- fixed chrome ---------- */
 .hdr{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;
-  justify-content:space-between;padding:22px clamp(20px,4vw,56px);
-  mix-blend-mode:normal;pointer-events:none}
+  justify-content:space-between;padding:20px clamp(20px,4vw,56px);pointer-events:none}
 .hdr>*{pointer-events:auto}
-.logo{display:flex;align-items:center;gap:12px;font-family:var(--disp);
-  font-weight:700;font-size:.95rem;letter-spacing:.34em}
-.logo svg{width:22px;height:22px;display:block}
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--disp);
+  font-size:1.02rem;letter-spacing:.1em;text-transform:uppercase}
+.logo em{font-style:normal;color:var(--green)}
+.logo svg{width:26px;height:18px;display:block}
 .readout{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
-.ro-label{font-family:var(--disp);font-weight:200;font-size:.6rem;
-  letter-spacing:.38em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
-.ro-bar{width:132px;height:1px;background:var(--hair);overflow:hidden}
-.ro-fill{height:100%;width:100%;background:var(--aurora);transform-origin:0 50%;transform:scaleX(0)}
+.ro-label{font-family:var(--body);font-weight:800;font-size:.6rem;
+  letter-spacing:.34em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
+.ro-bar{width:132px;height:2px;background:rgba(242,255,244,.12);overflow:hidden}
+.ro-fill{height:100%;width:100%;background:var(--lime);transform-origin:0 50%;transform:scaleX(0)}
 
-/* ---------- ambient overlays ---------- */
-.grain{position:fixed;inset:-40px;z-index:55;pointer-events:none;opacity:.06;
+/* ---------- overlays ---------- */
+.grain{position:fixed;inset:-40px;z-index:55;pointer-events:none;opacity:.055;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E")}
 .vig{position:fixed;inset:0;z-index:54;pointer-events:none;
-  background:radial-gradient(120% 90% at 50% 45%,transparent 58%,rgba(2,4,8,.55) 100%)}
+  background:radial-gradient(115% 90% at 50% 45%,transparent 55%,rgba(2,6,3,.6) 100%)}
 
-/* ---------- 01 · hero — NATTEN ---------- */
+/* ---------- 01 · GRUNNEN (hero) ---------- */
 .hero{position:relative;height:100vh;overflow:hidden;
-  background:linear-gradient(180deg,#03060B 0%,#04101D 44%,#0A2238 78%,#123350 100%)}
-.stars{position:absolute;inset:0;
-  background-image:radial-gradient(1px 1px at 12% 18%,rgba(232,245,252,.9),transparent 55%),
-  radial-gradient(1px 1px at 34% 8%,rgba(232,245,252,.7),transparent 55%),
-  radial-gradient(1.5px 1.5px at 56% 22%,rgba(232,245,252,.8),transparent 55%),
-  radial-gradient(1px 1px at 71% 12%,rgba(232,245,252,.6),transparent 55%),
-  radial-gradient(1px 1px at 84% 27%,rgba(232,245,252,.75),transparent 55%),
-  radial-gradient(1.5px 1.5px at 23% 33%,rgba(232,245,252,.5),transparent 55%),
-  radial-gradient(1px 1px at 91% 7%,rgba(232,245,252,.8),transparent 55%),
-  radial-gradient(1px 1px at 45% 15%,rgba(232,245,252,.55),transparent 55%)}
-.aur{position:absolute;filter:blur(28px);opacity:.5;border-radius:50%;
-  will-change:transform;transform:translateZ(0)}
-.aur-1{width:110vw;height:26vh;left:-16vw;top:4vh;
-  background:linear-gradient(100deg,transparent,var(--aurora) 35%,var(--violet) 70%,transparent);
-  animation:aur1 17s ease-in-out infinite alternate}
-.aur-2{width:90vw;height:20vh;left:18vw;top:16vh;opacity:.32;
-  background:linear-gradient(80deg,transparent,var(--violet) 40%,var(--aurora) 75%,transparent);
-  animation:aur2 23s ease-in-out infinite alternate}
-@keyframes aur1{from{transform:translateX(-4%) rotate(-3.5deg) scaleY(1)}to{transform:translateX(5%) rotate(-1deg) scaleY(1.35)}}
-@keyframes aur2{from{transform:translateX(3%) rotate(2.5deg)}to{transform:translateX(-5%) rotate(4deg) scaleY(1.3)}}
-.ridge{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:auto;display:block;will-change:transform}
-.ridge-far{opacity:.85}
-#snow{position:absolute;inset:0;z-index:5}
+  background:linear-gradient(180deg,#0A1210 0%,#14201A 34%,#2E2A20 72%,#3A332B 100%)}
+.sunline{position:absolute;left:0;right:0;top:30%;height:38%;
+  background:radial-gradient(70% 100% at 50% 100%,rgba(217,255,76,.14),transparent 70%)}
+.stakes{position:absolute;left:0;right:0;bottom:0;height:46%;pointer-events:none}
+.stakes svg{position:absolute;inset:0;width:100%;height:100%}
+#dust{position:absolute;inset:0;z-index:5}
 .hero-core{position:absolute;inset:0;z-index:6;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;padding:0 24px}
-.hero-kicker{margin-bottom:26px}
-.hero h1{font-weight:700;font-size:clamp(3.4rem,13vw,10.5rem);letter-spacing:.1em;
-  display:flex;overflow:hidden;padding:0 .1em}
+.hero-kicker{margin-bottom:24px}
+.hero h1{font-size:clamp(3rem,11.5vw,9.2rem);display:flex;flex-wrap:wrap;
+  justify-content:center;overflow:hidden;padding:0 .06em;column-gap:.22em}
+.hero h1 .w{display:flex;overflow:hidden}
 .hero h1 .ch{display:inline-block;will-change:transform}
-.hero-sub{margin-top:30px;font-family:var(--serif);font-size:clamp(1.05rem,2vw,1.4rem);
-  color:var(--dim)}
-.hint{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:7;
+.hero h1 .grn{color:var(--green)}
+.hero-sub{margin-top:24px;font-weight:600;font-size:clamp(1rem,2vw,1.3rem);
+  color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
+.hero-sub b{color:var(--lime);font-weight:800}
+.hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:7;
   display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--faint);
-  font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;font-family:var(--disp);font-weight:200}
-.hint::after{content:'';width:1px;height:44px;
-  background:linear-gradient(180deg,var(--aurora),transparent);
-  animation:drip 2.1s ease-in-out infinite}
+  font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;font-weight:800}
+.hint::after{content:'';width:2px;height:42px;
+  background:linear-gradient(180deg,var(--lime),transparent);
+  animation:drip 2s ease-in-out infinite}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* ---------- pinned scene shells ---------- */
+/* ---------- scene shells ---------- */
 .scene{position:relative;height:100vh;overflow:hidden;contain:layout paint}
 .beat{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:8;
-  text-align:center;opacity:0;width:min(88vw,880px);will-change:transform,opacity}
-.beat h2{font-weight:200;font-size:clamp(1.7rem,4.6vw,3.6rem);letter-spacing:.06em}
-.beat p{margin-top:16px;color:var(--dim);font-size:clamp(.95rem,1.6vw,1.15rem)}
-.snum{position:absolute;top:50%;left:clamp(16px,4vw,64px);transform:translateY(-50%);z-index:8;
-  font-family:var(--disp);font-weight:200;font-size:.62rem;letter-spacing:.4em;
-  color:var(--faint);writing-mode:vertical-rl;text-orientation:mixed}
+  text-align:center;opacity:0;width:min(90vw,940px);will-change:transform,opacity}
+.beat h2{font-size:clamp(2rem,6vw,4.6rem)}
+.beat h2 .lm{color:var(--lime)}
+.beat h2 .gr{color:var(--green)}
+.beat p{margin-top:14px;color:var(--dim);font-size:clamp(.95rem,1.6vw,1.15rem)}
+.snum{position:absolute;top:50%;left:clamp(14px,3.4vw,58px);transform:translateY(-50%);z-index:8;
+  font-weight:800;font-size:.6rem;letter-spacing:.4em;color:var(--faint);
+  writing-mode:vertical-rl;text-transform:uppercase}
 
-/* 02 · FALLET */
-.fallet{background:linear-gradient(180deg,#123350 0%,#0B2740 45%,#06182A 100%)}
-.streaks{position:absolute;inset:-20% 0;z-index:3;will-change:transform}
-.streak{position:absolute;top:0;bottom:0;width:1px;
-  background:linear-gradient(180deg,transparent,rgba(169,217,242,.4) 45%,transparent)}
-.fallet .ridge-copy{position:absolute;left:-10%;right:-10%;width:120%;bottom:-6%;
-  opacity:.55;will-change:transform;transform-origin:50% 100%}
-.fog{position:absolute;inset:auto 0 0 0;height:55%;z-index:4;
-  background:linear-gradient(180deg,transparent,rgba(7,22,38,.85))}
+/* 02 · GRUNNARBEID — layers */
+.grunn{background:linear-gradient(180deg,#3A332B 0%,#241F19 55%,#12100C 100%)}
+.layers{position:absolute;left:0;right:0;bottom:0;height:72%;z-index:3}
+.layer{position:absolute;left:0;right:0;will-change:transform;
+  display:flex;align-items:center;justify-content:flex-end;padding-right:clamp(16px,5vw,72px)}
+.layer span{font-weight:800;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(242,255,244,.55);background:rgba(5,10,6,.45);padding:4px 10px}
+.l1{bottom:0;height:26%;background:linear-gradient(180deg,#2B2119,#1C1610)}
+.l2{bottom:26%;height:22%;background:linear-gradient(180deg,#4A3E30,#372E23);
+  background-image:radial-gradient(3px 3px at 12% 40%,rgba(0,0,0,.35),transparent 60%),
+   radial-gradient(4px 4px at 34% 66%,rgba(0,0,0,.3),transparent 60%),
+   radial-gradient(3px 3px at 58% 30%,rgba(0,0,0,.35),transparent 60%),
+   radial-gradient(4px 4px at 81% 62%,rgba(0,0,0,.3),transparent 60%),
+   linear-gradient(180deg,#4A3E30,#372E23)}
+.l3{bottom:48%;height:14%;background:linear-gradient(180deg,#28323B,#1D242B)}
+.l4{bottom:62%;height:10%;background:linear-gradient(180deg,#155229,#0E3D1F)}
+.grunn .beat{top:32%}
 
-/* 03 · ISEN */
-.isen{background:#06182A}
-.ice-world{position:absolute;inset:0;z-index:2;will-change:clip-path;
+/* 03 · GRESSET — turf sweep */
+.gress{background:#12100C}
+.turf{position:absolute;inset:0;z-index:2;will-change:clip-path;
+  background:repeating-linear-gradient(90deg,#1E9A4B 0 18vw,#178A40 18vw 36vw);
+  }
+.turf::after{content:'';position:absolute;inset:0;
   background:
-   radial-gradient(90% 70% at 50% 68%,#0E3E63 0%,#0A2C4C 42%,#051B30 78%,#03101E 100%)}
-.crevasse{position:absolute;inset:0;
-  background:
-   linear-gradient(104deg,rgba(3,10,18,.92) 0%,transparent 28%),
-   linear-gradient(-104deg,rgba(3,10,18,.92) 0%,transparent 28%)}
-.ice-glow{position:absolute;left:50%;top:60%;width:60vmin;height:60vmin;
-  transform:translate(-50%,-50%);border-radius:50%;filter:blur(70px);
-  background:radial-gradient(circle,rgba(111,231,183,.28),rgba(111,231,183,0) 65%)}
-.crystal{position:absolute;left:50%;top:58%;width:min(52vmin,480px);height:min(52vmin,480px);
-  transform:translate(-50%,-50%);will-change:transform;opacity:.9}
-.crystal svg{width:100%;height:100%;display:block}
+   repeating-linear-gradient(0deg,rgba(0,0,0,.07) 0 2px,transparent 2px 5px),
+   radial-gradient(120% 80% at 50% 30%,transparent 40%,rgba(3,20,8,.55) 100%)}
+.midline{position:absolute;left:50%;top:0;bottom:0;width:3px;background:rgba(242,255,244,.85);
+  transform:translateX(-50%);z-index:3;opacity:0}
+.centercircle{position:absolute;left:50%;top:50%;width:min(46vmin,420px);height:min(46vmin,420px);
+  border:3px solid rgba(242,255,244,.85);border-radius:50%;transform:translate(-50%,-50%);
+  z-index:3;opacity:0}
+.gress .beat{text-shadow:0 2px 30px rgba(3,20,8,.8)}
 
-/* 04 · REISEN — horizontal */
-.reisen{background:linear-gradient(180deg,#03101E,#051B30)}
+/* 04 · ANLEGGENE — horizontal */
+.anlegg{background:linear-gradient(180deg,#0A1410,#071009)}
 .track{position:absolute;top:0;bottom:0;display:flex;align-items:center;
-  gap:8vw;padding:0 12vw;width:max-content;will-change:transform}
-.panel{width:min(66vw,720px);flex:none;position:relative;padding-top:9vh}
-.p-num{position:absolute;top:0;left:-.05em;z-index:0;font-family:var(--disp);font-weight:700;
-  font-size:clamp(7rem,20vh,13rem);color:transparent;
-  -webkit-text-stroke:1px rgba(169,217,242,.16);will-change:transform;line-height:1}
-.panel h3{position:relative;z-index:1;font-weight:400;font-size:clamp(1.5rem,3.4vw,2.6rem);
-  letter-spacing:.14em;margin-top:clamp(4rem,12vh,7.5rem)}
-.panel h3 em{font-family:var(--serif);font-weight:400;letter-spacing:0;color:var(--aurora)}
-.panel p{position:relative;z-index:1;margin-top:14px;color:var(--dim);max-width:44ch}
-.p-rule{width:64px;height:1px;background:var(--aurora);margin-top:26px;opacity:.7}
+  gap:7vw;padding:0 11vw;width:max-content;will-change:transform}
+.panel{width:min(62vw,660px);flex:none;position:relative;padding-top:8vh}
+.p-num{position:absolute;top:0;left:-.04em;z-index:0;font-family:var(--disp);
+  font-size:clamp(6.5rem,19vh,12rem);color:transparent;line-height:1;
+  -webkit-text-stroke:2px rgba(53,196,99,.25);will-change:transform}
+.panel h3{position:relative;z-index:1;font-size:clamp(1.7rem,3.8vw,3rem);
+  margin-top:clamp(4rem,11vh,7rem)}
+.panel h3 em{font-style:normal;color:var(--green)}
+.panel p{position:relative;z-index:1;margin-top:12px;color:var(--dim);max-width:46ch}
+.p-rule{width:70px;height:3px;background:var(--lime);margin-top:24px}
 
-/* 05 · DRÅPEN */
-.drapen{background:linear-gradient(180deg,#051B30,#03101E 70%,#020A12)}
-.drop-stage{position:absolute;inset:0;z-index:3}
-.drop-svg{position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(30vmin,240px);
-  will-change:transform}
-.ripples{position:absolute;left:50%;top:64%;transform:translate(-50%,-50%);width:min(70vmin,640px)}
-.stats{position:absolute;left:50%;bottom:10vh;transform:translateX(-50%);z-index:8;
-  display:flex;gap:clamp(28px,7vw,88px);opacity:0}
+/* 05 · FLOMLYS */
+.flomlys{background:linear-gradient(180deg,#071009 0%,#050A06 60%,#03130A 100%)}
+.mast{position:absolute;bottom:0;width:200px;z-index:3;opacity:.95}
+.mast svg{width:100%;height:auto;display:block}
+.mast-l{left:6%}
+.mast-r{right:6%;transform:scaleX(-1)}
+.cone{position:absolute;z-index:2;opacity:0;will-change:opacity;
+  width:70vw;height:85vh;pointer-events:none}
+.cone-l{left:-6vw;bottom:0;
+  background:linear-gradient(115deg,rgba(242,255,244,.16) 0%,rgba(217,255,76,.05) 42%,transparent 62%)}
+.cone-r{right:-6vw;bottom:0;
+  background:linear-gradient(-115deg,rgba(242,255,244,.16) 0%,rgba(217,255,76,.05) 42%,transparent 62%)}
+.glowpitch{position:absolute;inset:auto 0 0 0;height:34%;z-index:2;opacity:0;
+  background:linear-gradient(180deg,transparent,rgba(30,120,60,.35))}
+.flomlys .beat{top:38%}
+.stats{position:absolute;left:50%;bottom:9vh;transform:translateX(-50%);z-index:8;
+  display:flex;gap:clamp(26px,7vw,90px);opacity:0}
 .stat{text-align:center}
-.stat b{display:flex;align-items:baseline;justify-content:center;gap:.12em;
-  font-family:var(--disp);font-weight:400;font-size:clamp(1.6rem,4vw,3rem);color:var(--ice)}
-.stat b small{font-size:.5em;color:var(--aurora)}
-.stat span{display:block;margin-top:8px;font-size:.62rem;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--faint);font-family:var(--disp);font-weight:200}
+.stat b{display:flex;align-items:baseline;justify-content:center;gap:.1em;
+  font-family:var(--disp);font-size:clamp(1.9rem,4.6vw,3.4rem);color:var(--line)}
+.stat b .u{font-size:.45em;color:var(--lime);font-family:var(--body);font-weight:800}
+.stat span{display:block;margin-top:6px;font-size:.6rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--faint);font-weight:800}
 
-/* 06 · KILDEN (flasken) */
-.flasken{background:linear-gradient(180deg,#020A12,#04070D)}
-.flasken .beat{left:8%;top:50%;transform:translateY(-50%);
-  width:min(38vw,420px);text-align:left}
-.flasken .beat h2{font-size:clamp(1.4rem,3.2vw,2.5rem)}
-.bottle-wrap{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);
-  width:min(34vmin,300px);z-index:4;will-change:transform}
-.bottle-wrap svg{width:100%;height:auto;display:block;overflow:visible}
-.melt{position:absolute;inset:auto 0 0 0;height:36%;z-index:6;opacity:0;
-  background:linear-gradient(180deg,transparent,#04070D 82%)}
+/* 06 · KAMPKLART */
+.kamp{background:linear-gradient(180deg,#03130A,#050A06)}
+.goal-wrap{position:absolute;left:57%;top:53%;transform:translate(-50%,-50%);
+  width:min(60vw,660px);z-index:4}
+.goal-wrap svg{width:100%;height:auto;display:block;overflow:visible}
+.kamp .beat{left:9%;top:50%;transform:translateY(-50%);
+  width:min(36vw,400px);text-align:left}
+.kamp .beat h2{font-size:clamp(1.9rem,4.2vw,3.4rem)}
+.kamp .melt{position:absolute;inset:auto 0 0 0;height:38%;z-index:6;opacity:0;
+  background:linear-gradient(180deg,transparent,#050A06 84%)}
 
-/* ---------- after-film content ---------- */
-.content{position:relative;background:#04070D}
+/* ---------- content ---------- */
+.content{position:relative;background:#050A06}
 .blk{max-width:1180px;margin:0 auto;padding:clamp(80px,14vh,150px) clamp(20px,5vw,56px)}
-.blk-head{display:flex;flex-direction:column;gap:18px;margin-bottom:clamp(36px,6vh,64px)}
-.blk-head h2{font-weight:200;font-size:clamp(1.9rem,4.6vw,3.4rem);letter-spacing:.05em}
+.blk-head{display:flex;flex-direction:column;gap:16px;margin-bottom:clamp(34px,6vh,60px)}
+.blk-head h2{font-size:clamp(2.2rem,5.4vw,4rem)}
+.blk-head h2 em{font-style:normal;color:var(--green)}
 .reveal{clip-path:inset(0 0 100% 0);will-change:clip-path}
 
-/* film / higgsfield concept */
-.film-frame{position:relative;border:1px solid var(--hair);background:#030A12;overflow:hidden}
+/* prosess */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px;
+  background:var(--hair)}
+.step{background:#050A06;padding:30px 24px 34px}
+.step i{font-family:var(--disp);font-style:normal;font-size:2.2rem;color:var(--green);display:block}
+.step h3{font-size:1.05rem;margin-top:14px;letter-spacing:.06em}
+.step p{margin-top:10px;color:var(--dim);font-size:.9rem}
+
+/* film / higgsfield */
+.film-frame{position:relative;border:1px solid var(--hair);background:#040B06;overflow:hidden}
 .ff-top{display:flex;align-items:center;gap:14px;padding:12px 18px;
-  border-bottom:1px solid var(--hair);font-family:var(--disp);font-weight:200;
+  border-bottom:1px solid var(--hair);font-weight:800;
   font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
 .rec{width:8px;height:8px;border-radius:50%;background:#FF5C5C;
   box-shadow:0 0 8px rgba(255,92,92,.8);animation:rec 1.6s ease-in-out infinite}
@@ -190,322 +201,349 @@ h1,h2,h3{font-family:var(--disp);font-weight:400;line-height:1.12}
 .ff-stage{position:relative}
 .ff-stage svg{display:block;width:100%;height:auto}
 .ff-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:76px;height:76px;border-radius:50%;border:1px solid rgba(232,245,252,.4);
-  background:rgba(4,7,13,.55);display:flex;align-items:center;
-  justify-content:center;transition:transform .35s ease,border-color .35s ease}
-.film-frame:hover .ff-play{transform:translate(-50%,-50%) scale(1.08);border-color:var(--aurora)}
+  width:76px;height:76px;border-radius:50%;border:1px solid rgba(242,255,244,.4);
+  background:rgba(5,10,6,.55);display:flex;align-items:center;justify-content:center;
+  transition:transform .35s ease,border-color .35s ease}
+.film-frame:hover .ff-play{transform:translate(-50%,-50%) scale(1.08);border-color:var(--lime)}
 .ff-play svg{width:22px;height:22px;margin-left:4px}
 .ff-bottom{display:flex;align-items:center;gap:16px;padding:14px 18px;border-top:1px solid var(--hair)}
-.ff-line{position:relative;flex:1;height:2px;background:rgba(169,217,242,.14)}
+.ff-line{position:relative;flex:1;height:2px;background:rgba(53,196,99,.18)}
 .ff-line i{position:absolute;top:50%;width:7px;height:7px;border-radius:50%;
-  transform:translate(-50%,-50%);background:var(--ice);opacity:.85}
-.ff-line i.on{background:var(--aurora);box-shadow:0 0 10px rgba(111,231,183,.9)}
-.ff-tc{font-family:var(--disp);font-weight:200;font-size:.6rem;letter-spacing:.22em;color:var(--dim)}
+  transform:translate(-50%,-50%);background:var(--line);opacity:.85}
+.ff-line i.on{background:var(--lime);box-shadow:0 0 10px rgba(217,255,76,.9)}
+.ff-tc{font-weight:800;font-size:.6rem;letter-spacing:.22em;color:var(--dim)}
 .ff-note{margin-top:16px;color:var(--faint);font-size:.85rem}
 .ff-note em{color:var(--dim)}
 .boards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
-.board{border:1px solid var(--hair);background:#030A12;padding:10px}
+.board{border:1px solid var(--hair);background:#040B06;padding:10px}
 .board svg{width:100%;height:auto;display:block}
-.board span{display:block;margin-top:10px;font-family:var(--disp);font-weight:200;
+.board span{display:block;margin-top:10px;font-weight:800;
   font-size:.54rem;letter-spacing:.26em;color:var(--faint);text-transform:uppercase}
 
-/* kolleksjon */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.card{border:1px solid var(--hair);padding:34px 26px 28px;background:linear-gradient(180deg,#050D17,#030A12);
-  transition:transform .45s cubic-bezier(.2,.7,.2,1),border-color .45s ease}
-.card:hover{transform:translateY(-8px);border-color:rgba(111,231,183,.45)}
-.card svg{width:64px;height:150px;display:block;margin:0 auto 26px}
-.card h3{font-size:1rem;letter-spacing:.24em;text-align:center}
-.card .desc{margin-top:10px;color:var(--dim);font-size:.88rem;text-align:center}
-.card .pris{margin-top:18px;text-align:center;font-family:var(--disp);font-weight:200;
-  font-size:.8rem;color:var(--aurora);letter-spacing:.2em}
+/* referanser */
+.refs{display:flex;flex-wrap:wrap;gap:14px}
+.ref{border:1px solid var(--hair);padding:22px 26px;flex:1;min-width:240px;
+  transition:border-color .35s ease,transform .35s ease}
+.ref:hover{border-color:rgba(217,255,76,.5);transform:translateY(-5px)}
+.ref h3{font-size:1.15rem}
+.ref p{margin-top:6px;color:var(--dim);font-size:.86rem}
+.ref .tag{display:inline-block;margin-top:14px;font-weight:800;font-size:.58rem;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--green)}
 
-/* manifest + marquee */
-.mani{text-align:center;max-width:760px;margin:0 auto}
-.mani p{font-family:var(--serif);font-size:clamp(1.3rem,2.8vw,2rem);line-height:1.55;color:var(--ice-bright)}
-.mani cite{display:block;margin-top:26px;font-family:var(--disp);font-weight:200;font-style:normal;
-  font-size:.6rem;letter-spacing:.4em;color:var(--faint);text-transform:uppercase}
-.mq{overflow:hidden;padding:clamp(30px,6vh,60px) 0;border-top:1px solid var(--hair);
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.kontakt .kd p{color:var(--dim);margin-top:14px;max-width:46ch}
+.klist{list-style:none;margin-top:8px}
+.klist li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--hair);
+  align-items:baseline}
+.klist b{font-weight:800;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--faint);min-width:86px}
+.klist span{font-weight:600}
+.klist a span{color:var(--green)}
+.cta{display:inline-block;margin-top:30px;padding:16px 34px;background:var(--lime);
+  color:var(--night);font-family:var(--disp);font-size:1.05rem;letter-spacing:.08em;
+  text-transform:uppercase;transition:transform .3s ease,background .3s ease}
+.cta:hover{transform:translateY(-3px);background:#fff}
+
+/* marquee + footer */
+.mq{overflow:hidden;padding:clamp(28px,5vh,54px) 0;border-top:1px solid var(--hair);
   border-bottom:1px solid var(--hair)}
 .mq-track{display:flex;width:max-content;will-change:transform;font-family:var(--disp);
-  font-weight:200;font-size:clamp(1.6rem,4.5vw,3.2rem);letter-spacing:.22em;color:var(--faint);
-  white-space:nowrap}
+  font-size:clamp(1.7rem,4.6vw,3.4rem);letter-spacing:.06em;color:var(--faint);
+  white-space:nowrap;text-transform:uppercase}
 .mq-track span{padding-right:.6em}
-.mq-track em{font-family:var(--serif);color:var(--aurora)}
-
-/* footer */
-footer{padding:clamp(70px,12vh,130px) clamp(20px,5vw,56px) 44px;text-align:center}
-.cta{display:inline-block;margin-top:34px;padding:10px 4px 12px;position:relative;
-  font-family:var(--disp);font-weight:400;font-size:clamp(1.15rem,2.6vw,1.8rem);letter-spacing:.14em}
-.cta::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;
-  background:var(--aurora);transform-origin:0 50%;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.cta:hover::after{transform:scaleX(.35)}
-.socials{display:flex;justify-content:center;gap:26px;margin-top:52px}
+.mq-track em{font-style:normal;color:var(--green)}
+footer{padding:clamp(60px,10vh,110px) clamp(20px,5vw,56px) 40px;text-align:center}
+.socials{display:flex;justify-content:center;gap:26px;margin-top:8px}
 .socials a{opacity:.55;transition:opacity .3s ease}
 .socials a:hover{opacity:1}
-.socials svg{width:19px;height:19px;display:block;fill:var(--ice-bright)}
-.fine{margin-top:44px;font-size:.68rem;color:var(--faint);letter-spacing:.08em}
+.socials svg{width:19px;height:19px;display:block;fill:var(--line)}
+.fine{margin-top:38px;font-size:.68rem;color:var(--faint);letter-spacing:.06em}
 
 /* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
-  .aur,.hint::after,.rec{animation:none}
-  #snow{display:none}
+  .hint::after,.rec{animation:none}
+  #dust{display:none}
   .beat{position:relative;left:auto;top:auto;transform:none;opacity:1;margin:8vh auto}
-  .scene{height:auto;min-height:60vh;padding:14vh 0}
+  .kamp .beat{margin:8vh auto;text-align:center}
+  .scene{height:auto;min-height:56vh;padding:12vh 0}
   .stats{position:relative;left:auto;bottom:auto;transform:none;opacity:1;
     justify-content:center;margin-top:6vh}
   .track{position:relative;flex-direction:column;width:auto;align-items:flex-start;
-    gap:10vh;padding:8vh 8vw}
-  .reisen{height:auto}
+    gap:9vh;padding:8vh 8vw}
+  .anlegg{height:auto}
   .reveal{clip-path:none}
-  .drop-svg{top:30%}
-  .bottle-wrap{position:relative;left:auto;top:auto;transform:none;margin:0 auto}
+  .turf,.midline,.centercircle,.cone,.glowpitch{opacity:1}
+  .layers .layer{transform:none}
 }
 @media (max-width:760px){
   .boards{grid-template-columns:repeat(2,1fr)}
   .readout{display:none}
+  .kontakt{grid-template-columns:1fr}
+  .mast{width:110px}
 }
 </style>
 </head>
 <body>
 
-<!-- fixed chrome -->
 <header class="hdr">
-  <a class="logo" href="#" aria-label="ISBRE">
-    <svg viewBox="0 0 24 24" fill="none" stroke="#A9D9F2" stroke-width="1.4">
-      <path d="M12 2v20M12 2l-2.5 3M12 2l2.5 3M12 22l-2.5-3M12 22l2.5-3"/>
-      <path d="M3.3 7l17.4 10M3.3 7l3.9.2M3.3 7l.2 3.9M20.7 17l-3.9-.2M20.7 17l-.2-3.9"/>
-      <path d="M3.3 17L20.7 7M3.3 17l.2-3.9M3.3 17l3.9.2M20.7 7l-.2 3.9M20.7 7l-3.9-.2"/>
+  <a class="logo" href="#" aria-label="PST Sportsanlegg">
+    <svg viewBox="0 0 26 18" fill="none" stroke="#35C463" stroke-width="1.6">
+      <rect x="1" y="1" width="24" height="16" rx="2"/>
+      <path d="M13 1v16" stroke-width="1.2"/>
+      <circle cx="13" cy="9" r="3" stroke-width="1.2"/>
     </svg>
-    ISBRE
+    PST <em>Sportsanlegg</em>
   </a>
   <div class="readout">
-    <div class="ro-label" id="roLabel">01 — Natten</div>
+    <div class="ro-label" id="roLabel">01 — Grunnen</div>
     <div class="ro-bar"><div class="ro-fill" id="roFill"></div></div>
   </div>
 </header>
 <div class="grain"></div>
 <div class="vig"></div>
 
-<!-- ======== 01 · NATTEN (hero) ======== -->
-<section class="hero" id="natten">
-  <div class="stars"></div>
-  <div class="aur aur-1"></div>
-  <div class="aur aur-2"></div>
-  <svg class="ridge ridge-far" id="ridgeFar" viewBox="0 0 1440 300" preserveAspectRatio="none">
-    <path d="M0 300V196l96-52 118 64 132-96 128 58 104-84 142 92 118-44 128 70 116-58 134 76 124-48 100 42V300Z" fill="#0A1B2D"/>
-  </svg>
-  <svg class="ridge" id="ridgeNear" viewBox="0 0 1440 260" preserveAspectRatio="none">
-    <path d="M0 260V150l120-70 150 84 166-118 158 74 130-52 178 102 146-64 158 88 118-40 116 52V260Z" fill="#050D17"/>
-  </svg>
-  <canvas id="snow"></canvas>
+<!-- ======== 01 · GRUNNEN ======== -->
+<section class="hero" id="grunnen">
+  <div class="sunline"></div>
+  <div class="stakes">
+    <svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+      <path d="M0 400V330l340-40 400-24 380 18 320 30v86Z" fill="#2A241C"/>
+      <path d="M0 400V352l360-28 420-14 380 12 280 22v56Z" fill="#1C1812"/>
+      <g stroke="#D9FF4C" stroke-width="2" opacity=".5">
+        <path d="M240 330v-46M241 284l10 6M760 300v-44M761 256l10 6M1180 322v-46M1181 276l10 6"/>
+      </g>
+    </svg>
+  </div>
+  <canvas id="dust"></canvas>
   <div class="hero-core">
-    <div class="kicker hero-kicker">Smeltevann fra norske breer</div>
-    <h1 id="wordmark" aria-label="ISBRE">ISBRE</h1>
-    <p class="hero-sub">Tusen år på vei til deg.</p>
+    <div class="kicker hero-kicker">Kristiansand · Hele Norge</div>
+    <h1 id="wordmark"><span class="w" data-word="PST"></span>
+      <span class="w grn" data-word="SPORTSANLEGG"></span></h1>
+    <p class="hero-sub">Totalleverandør av sportsanlegg — <b>fra grus til gress</b></p>
   </div>
   <div class="hint">Bla</div>
 </section>
 
-<!-- ======== 02 · FALLET (pinned) ======== -->
-<section class="scene fallet" id="fallet">
-  <div class="snum">02 · Fallet</div>
-  <div class="streaks" id="streaks"></div>
-  <svg class="ridge-copy" viewBox="0 0 1440 260" preserveAspectRatio="none">
-    <path d="M0 260V150l120-70 150 84 166-118 158 74 130-52 178 102 146-64 158 88 118-40 116 52V260Z" fill="#081521"/>
-  </svg>
-  <div class="fog"></div>
-  <div class="beat" data-beat="f1">
-    <h2>Snø som falt<br>før sagaene ble skrevet</h2>
+<!-- ======== 02 · GRUNNARBEID ======== -->
+<section class="scene grunn" id="grunnarbeid">
+  <div class="snum">02 · Grunnarbeid</div>
+  <div class="layers">
+    <div class="layer l1"><span>Drenering</span></div>
+    <div class="layer l2"><span>Pukk og avretting</span></div>
+    <div class="layer l3"><span>Støtdempende pad</span></div>
+    <div class="layer l4"><span>Klart for dekke</span></div>
   </div>
-  <div class="beat" data-beat="f2">
-    <h2>presses stille<br>til krystall</h2>
-    <p>Lag på lag. Vinter på vinter. Vekten gjør resten.</p>
+  <div class="beat" data-beat="g1">
+    <h2>Alt som varer,<br>starter <span class="lm">under</span> overflaten</h2>
+    <p>Drenering, pukk, pad. Grunnarbeidet ser ingen — men alle merker det i tjue år.</p>
   </div>
 </section>
 
-<!-- ======== 03 · ISEN (pinned) ======== -->
-<section class="scene isen" id="isen">
-  <div class="snum">03 · Isen</div>
-  <div class="ice-world" id="iceWorld">
-    <div class="ice-glow"></div>
-    <div class="crevasse"></div>
-    <div class="crystal" id="crystal">
-      <svg viewBox="0 0 200 200" fill="none" stroke="#A9D9F2" stroke-width=".8" opacity=".9">
-        <g id="arm">
-          <path d="M100 100V18M100 34l-9-11M100 34l9-11M100 56l-13-14M100 56l13-14M100 78l-9-10M100 78l9-10"/>
-        </g>
-        <use href="#arm" transform="rotate(60 100 100)"/>
-        <use href="#arm" transform="rotate(120 100 100)"/>
-        <use href="#arm" transform="rotate(180 100 100)"/>
-        <use href="#arm" transform="rotate(240 100 100)"/>
-        <use href="#arm" transform="rotate(300 100 100)"/>
-        <circle cx="100" cy="100" r="7" stroke-width=".6"/>
-        <circle cx="100" cy="100" r="14" stroke-width=".4" opacity=".5"/>
-      </svg>
-    </div>
+<!-- ======== 03 · GRESSET ======== -->
+<section class="scene gress" id="gresset">
+  <div class="snum">03 · Gresset</div>
+  <div class="turf" id="turf"></div>
+  <div class="midline" id="midline"></div>
+  <div class="centercircle" id="centercircle"></div>
+  <div class="beat" data-beat="t1">
+    <h2><span class="lm">Greenfields</span> kunstgress</h2>
+    <p>Millioner av strå. Ett perfekt dekke. Eksklusiv leverandør i Norge.</p>
   </div>
-  <div class="beat" data-beat="i1">
-    <h2>Under breen<br>er tiden blå</h2>
-  </div>
-  <div class="beat" data-beat="i2">
-    <h2>214 meter is.<br>Null hastverk.</h2>
-    <p>Trykket presser ut hver luftboble — igjen står bare klarhet.</p>
+  <div class="beat" data-beat="t2">
+    <h2>Rullet ut.<br>Sydd. <span class="gr">Ferdig.</span></h2>
   </div>
 </section>
 
-<!-- ======== 04 · REISEN (pinned, horisontal) ======== -->
-<section class="scene reisen" id="reisen">
-  <div class="snum">04 · Reisen</div>
+<!-- ======== 04 · ANLEGGENE (horisontal) ======== -->
+<section class="scene anlegg" id="anleggene">
+  <div class="snum">04 · Anleggene</div>
   <div class="track" id="track">
     <div class="panel">
       <div class="p-num">01</div>
-      <h3>SNØFALL <em>år ~1000</em></h3>
-      <p>Ett lag av vinter legger seg til ro på fjellet — og blir liggende. Ingen skal noensinne gå her.</p>
+      <h3>Kunstgress<em>baner</em></h3>
+      <p>Fotballbaner i alle størrelser — fra nærmiljø til stadion. Greenfields-dekker som tåler norsk vær og norske vintre.</p>
       <div class="p-rule"></div>
     </div>
     <div class="panel">
       <div class="p-num">02</div>
-      <h3>KOMPRESJON</h3>
-      <p>Århundrer av vekt gjør snø til firn, og firn til klar, blå is. Breen er et arkiv over tusen vintre.</p>
+      <h3>Friidrett <em>&amp; løpebaner</em></h3>
+      <p>Kunststoffdekker for friidrettsanlegg — fart i banen og demping der kroppen trenger det.</p>
       <div class="p-rule"></div>
     </div>
     <div class="panel">
       <div class="p-num">03</div>
-      <h3>SMELTING</h3>
-      <p>En varm sommer slipper de første dråpene fri fra bunnen av arkivet. De eldste går først.</p>
+      <h3>Tennis <em>&amp; padel</em></h3>
+      <p>Baner bygget for presisjon: riktig sprett, riktig feste, riktig fall — ute og inne.</p>
       <div class="p-rule"></div>
     </div>
     <div class="panel">
       <div class="p-num">04</div>
-      <h3>KILDEN</h3>
-      <p>Bekken under breen samler tusen års tålmodighet — filtrert gjennom is, aldri gjennom noe annet.</p>
+      <h3>Ball<em>binger</em></h3>
+      <p>Modulbaserte binger med kunstgress — og utstyr for basket, håndball, volleyball, bandy og badminton. Ett anlegg, hele nabolaget.</p>
+      <div class="p-rule"></div>
+    </div>
+    <div class="panel">
+      <div class="p-num">05</div>
+      <h3>Stadion<em>gjerder</em></h3>
+      <p>Innramming som fullfører anlegget — sikkert, ryddig og bygget for å stå.</p>
       <div class="p-rule"></div>
     </div>
   </div>
 </section>
 
-<!-- ======== 05 · DRÅPEN (pinned) ======== -->
-<section class="scene drapen" id="drapen">
-  <div class="snum">05 · Dråpen</div>
-  <div class="drop-stage">
-    <svg class="drop-svg" id="dropSvg" viewBox="0 0 100 140">
-      <path d="M50 8C50 8 18 58 18 88a32 32 0 0 0 64 0C82 58 50 8 50 8Z"
-        fill="none" stroke="#A9D9F2" stroke-width="1.4"/>
-      <path d="M38 86a13 13 0 0 0 8 15" stroke="#E8F5FC" stroke-width="1.2" fill="none" opacity=".8"/>
-    </svg>
-    <svg class="ripples" id="ripples" viewBox="0 0 400 160">
-      <ellipse class="rip" cx="200" cy="80" rx="30" ry="9" fill="none" stroke="#A9D9F2" stroke-width="1"/>
-      <ellipse class="rip" cx="200" cy="80" rx="30" ry="9" fill="none" stroke="#A9D9F2" stroke-width=".8"/>
-      <ellipse class="rip" cx="200" cy="80" rx="30" ry="9" fill="none" stroke="#6FE7B7" stroke-width=".6"/>
+<!-- ======== 05 · FLOMLYS ======== -->
+<section class="scene flomlys" id="flomlyset">
+  <div class="snum">05 · Flomlys</div>
+  <div class="cone cone-l" id="coneL"></div>
+  <div class="cone cone-r" id="coneR"></div>
+  <div class="mast mast-l">
+    <svg viewBox="0 0 200 420" fill="none" stroke="#0F1712" stroke-width="0">
+      <path d="M70 420L88 60h24l18 360h-14L102 90h-4L84 420Z" fill="#0D1410"/>
+      <g fill="#141E17">
+        <rect x="60" y="28" width="80" height="14" rx="3"/>
+        <rect x="66" y="46" width="68" height="12" rx="3"/>
+      </g>
+      <g fill="#F2FFF4" id="lampsL" opacity=".15">
+        <circle cx="74" cy="35" r="4"/><circle cx="92" cy="35" r="4"/>
+        <circle cx="110" cy="35" r="4"/><circle cx="128" cy="35" r="4"/>
+        <circle cx="80" cy="52" r="4"/><circle cx="100" cy="52" r="4"/><circle cx="120" cy="52" r="4"/>
+      </g>
     </svg>
   </div>
-  <div class="beat" data-beat="d1">
-    <h2>Én dråpe<br>om gangen</h2>
+  <div class="mast mast-r">
+    <svg viewBox="0 0 200 420" fill="none">
+      <path d="M70 420L88 60h24l18 360h-14L102 90h-4L84 420Z" fill="#0D1410"/>
+      <g fill="#141E17">
+        <rect x="60" y="28" width="80" height="14" rx="3"/>
+        <rect x="66" y="46" width="68" height="12" rx="3"/>
+      </g>
+      <g fill="#F2FFF4" id="lampsR" opacity=".15">
+        <circle cx="74" cy="35" r="4"/><circle cx="92" cy="35" r="4"/>
+        <circle cx="110" cy="35" r="4"/><circle cx="128" cy="35" r="4"/>
+        <circle cx="80" cy="52" r="4"/><circle cx="100" cy="52" r="4"/><circle cx="120" cy="52" r="4"/>
+      </g>
+    </svg>
+  </div>
+  <div class="glowpitch" id="glowpitch"></div>
+  <div class="beat" data-beat="l1">
+    <h2>Så tenner vi <span class="lm">lyset</span></h2>
+    <p>Et anlegg er ikke ferdig før det kan brukes en mørk tirsdag i november.</p>
   </div>
   <div class="stats" id="stats">
-    <div class="stat"><b><span class="cnt" data-to="1024">0</span></b><span>år på vei</span></div>
-    <div class="stat"><b><span class="cnt" data-to="214">0</span><small> m</small></b><span>under isen</span></div>
-    <div class="stat"><b><span class="cnt" data-to="22">0</span></b><span>mineraler</span></div>
+    <div class="stat"><b><span class="cnt" data-to="2018">0</span></b><span>Etablert</span></div>
+    <div class="stat"><b><span class="cnt" data-to="8">0</span></b><span>Fagfolk</span></div>
+    <div class="stat"><b>Greenfields</b><span>Eksklusiv leverandør</span></div>
   </div>
 </section>
 
-<!-- ======== 06 · KILDEN — flasken (pinned) ======== -->
-<section class="scene flasken" id="flasken">
-  <div class="snum">06 · Kilden</div>
-  <div class="bottle-wrap" id="bottleWrap">
-    <svg viewBox="0 0 120 340">
-      <g id="bottleLines" fill="none" stroke="#A9D9F2" stroke-width="1.6" stroke-linecap="round">
-        <path class="bl" d="M48 12h24v26c0 8 20 18 20 44v212a24 24 0 0 1-24 24H52a24 24 0 0 1-24-24V82c0-26 20-36 20-44V12Z"/>
-        <path class="bl" d="M48 6h24" stroke-width="2"/>
-        <path class="bl" d="M36 150h48" stroke-width=".8" opacity=".7"/>
-        <path class="bl" d="M36 218h48" stroke-width=".8" opacity=".7"/>
+<!-- ======== 06 · KAMPKLART ======== -->
+<section class="scene kamp" id="kampklart">
+  <div class="snum">06 · Kampklart</div>
+  <div class="goal-wrap" id="goalWrap">
+    <svg viewBox="0 0 760 300">
+      <g id="goalLines" fill="none" stroke="#F2FFF4" stroke-width="4" stroke-linecap="round">
+        <path class="gl" d="M60 280V60h640v220"/>
+        <path class="gl" d="M60 280l50-60V60M700 280l-50-60V60" stroke-width="2.5" opacity=".8"/>
+        <path class="gl" d="M110 220h540" stroke-width="2.5" opacity=".8"/>
       </g>
-      <g id="bottleLabel" opacity="0">
-        <text x="60" y="190" text-anchor="middle" fill="#E8F5FC"
-          font-family="Unbounded,sans-serif" font-size="9.5" letter-spacing="3">ISBRE</text>
-        <text x="60" y="205" text-anchor="middle" fill="rgba(232,245,252,.5)"
-          font-family="Manrope,sans-serif" font-size="5" letter-spacing="1.6">STILLE · 0,5 L</text>
+      <g id="goalNet" stroke="rgba(242,255,244,.28)" stroke-width="1" opacity="0">
+        <path d="M60 60l50 160M188 60l34 160M316 60l18 160M444 60l2 160M572 60l-14 160M700 60l-50 160" fill="none"/>
+        <path d="M60 100h640M75 140h610M90 180h580" fill="none"/>
       </g>
+      <circle id="ball" cx="-60" cy="266" r="14" fill="#F2FFF4" opacity="0"/>
+      <ellipse id="ballshadow" cx="-60" cy="284" rx="18" ry="4" fill="rgba(0,0,0,.5)" opacity="0"/>
     </svg>
   </div>
-  <div class="beat" data-beat="b1">
-    <h2>Tappet ved kilden.<br>Urørt ellers.</h2>
+  <div class="beat" data-beat="k1">
+    <h2>Klart til <span class="lm">avspark</span></h2>
+    <p>Befaring, prosjektering, bygging, overlevering — vi står i det til ballen ruller.</p>
   </div>
   <div class="melt" id="melt"></div>
 </section>
 
-<!-- ======== after-film content ======== -->
+<!-- ======== content ======== -->
 <main class="content">
 
-  <!-- Higgsfield-konsept -->
+  <section class="blk" id="prosess">
+    <div class="blk-head">
+      <div class="kicker">Slik jobber vi</div>
+      <h2 class="reveal">Fire steg til <em>ferdig anlegg</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><i>1</i><h3>Befaring</h3><p>Vi ser på tomta, grunnen og behovet — og sier ærlig hva som lønner seg.</p></div>
+      <div class="step reveal"><i>2</i><h3>Prosjektering</h3><p>Riktig dekke, riktig oppbygging, riktig budsjett. Alt dokumentert.</p></div>
+      <div class="step reveal"><i>3</i><h3>Bygging</h3><p>Egne fagfolk fra grunnarbeid til siste søm — ett ansvarspunkt hele veien.</p></div>
+      <div class="step reveal"><i>4</i><h3>Overlevering</h3><p>Ferdig oppmerket, testet og klart til bruk. Med drift- og vedlikeholdsråd på kjøpet.</p></div>
+    </div>
+  </section>
+
   <section class="blk" id="film">
     <div class="blk-head">
       <div class="kicker">Neste kapittel</div>
-      <h2 class="reveal">Filmen — slik den lages<br>med Higgsfield</h2>
-      <p style="color:var(--dim);max-width:62ch">Denne siden kjører i dag på ren kode (Lane A).
-      Når Higgsfield kobles på, byttes filmen ut med ekte generert footage — fem kapitler,
-      ett kontinuerlig kamera, kjedet bilde-for-bilde med Seedance&nbsp;2.0. Under:
-      konsept-still av åpningsframen og storyboardet for kjeden.</p>
+      <h2 class="reveal">Anleggsfilmen — <em>med Higgsfield</em></h2>
+      <p style="color:var(--dim);max-width:62ch">Denne siden kjører på ren kode (Lane A).
+      Neste steg er ekte generert footage: én sammenhengende dronereise over et anlegg som
+      bygges — fem kapitler kjedet bilde-for-bilde med Seedance&nbsp;2.0. Under: konsept-still
+      av åpningsframen og storyboardet.</p>
     </div>
 
     <div class="film-frame reveal">
       <div class="ff-top">
         <span class="rec"></span><span>Seedance 2.0</span>
         <span class="sp"></span>
-        <span>K1 / 5 · Natten</span><span>1080p · std</span><span>audio av</span>
+        <span>K1 / 5 · Grunnen</span><span>1080p · std</span><span>audio av</span>
       </div>
       <div class="ff-stage">
-        <!-- konsept-keyframe: nordlys over breen — tegnet som SVG (byttes mot ekte footage) -->
-        <svg viewBox="0 0 1280 720" role="img" aria-label="Konseptbilde: nordlys over brelandskap">
+        <svg viewBox="0 0 1280 720" role="img" aria-label="Konseptbilde: flomlyst kunstgressbane sett fra luften i skumringen">
           <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#02050A"/><stop offset=".45" stop-color="#04101D"/>
-              <stop offset=".8" stop-color="#0A2238"/><stop offset="1" stop-color="#123350"/>
+            <linearGradient id="psky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#04090B"/><stop offset=".5" stop-color="#0A1512"/>
+              <stop offset="1" stop-color="#12251A"/>
             </linearGradient>
-            <linearGradient id="a1" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#6FE7B7" stop-opacity="0"/>
-              <stop offset=".4" stop-color="#6FE7B7" stop-opacity=".55"/>
-              <stop offset=".72" stop-color="#8FA8FF" stop-opacity=".45"/>
-              <stop offset="1" stop-color="#8FA8FF" stop-opacity="0"/>
+            <linearGradient id="ppitch" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1E9A4B"/><stop offset="1" stop-color="#116234"/>
             </linearGradient>
-            <linearGradient id="crev" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#0E3E63"/><stop offset="1" stop-color="#051B30"/>
-            </linearGradient>
-            <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="18"/>
+            <filter id="psoft" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="14"/>
             </filter>
-            <radialGradient id="moon" cx=".5" cy=".5" r=".5">
-              <stop offset="0" stop-color="#E8F5FC" stop-opacity=".95"/>
-              <stop offset=".55" stop-color="#E8F5FC" stop-opacity=".18"/>
-              <stop offset="1" stop-color="#E8F5FC" stop-opacity="0"/>
-            </radialGradient>
           </defs>
-          <rect width="1280" height="720" fill="url(#sky)"/>
-          <g fill="#E8F5FC">
-            <circle cx="130" cy="90" r="1.5" opacity=".9"/><circle cx="320" cy="55" r="1" opacity=".6"/>
-            <circle cx="470" cy="120" r="1.3" opacity=".8"/><circle cx="705" cy="60" r="1" opacity=".7"/>
-            <circle cx="905" cy="95" r="1.6" opacity=".9"/><circle cx="1105" cy="70" r="1" opacity=".6"/>
-            <circle cx="1195" cy="150" r="1.2" opacity=".8"/><circle cx="590" cy="40" r="1" opacity=".5"/>
-            <circle cx="820" cy="150" r="1" opacity=".55"/><circle cx="240" cy="170" r="1" opacity=".5"/>
+          <rect width="1280" height="720" fill="url(#psky)"/>
+          <g fill="#F2FFF4">
+            <circle cx="180" cy="80" r="1.4" opacity=".8"/><circle cx="420" cy="55" r="1" opacity=".6"/>
+            <circle cx="760" cy="70" r="1.3" opacity=".7"/><circle cx="1040" cy="95" r="1" opacity=".6"/>
+            <circle cx="1200" cy="60" r="1.4" opacity=".8"/><circle cx="580" cy="105" r="1" opacity=".5"/>
           </g>
-          <circle cx="1060" cy="140" r="90" fill="url(#moon)"/>
-          <circle cx="1060" cy="140" r="26" fill="#E8F5FC" opacity=".9"/>
-          <path d="M-40 260 C240 140 460 260 760 150 S1180 190 1330 90 L1330 30 C1080 130 860 60 620 170 S180 190 -40 190Z"
-            fill="url(#a1)" filter="url(#soft)" opacity=".8"/>
-          <path d="M-40 330 C300 240 560 330 860 240 S1220 260 1330 190 L1330 150 C1100 230 880 170 640 260 S220 280 -40 260Z"
-            fill="url(#a1)" filter="url(#soft)" opacity=".38"/>
-          <path d="M0 720V520l150-90 180 100 200-150 190 90 160-64 220 126 180-80V720Z" fill="#0A1B2D"/>
-          <path d="M0 720V585l185-105 225 125 250-175 235 110 200-80 185 96V720Z" fill="#050D17"/>
-          <path d="M540 720l100-240 100 240Z" fill="url(#crev)"/>
-          <path d="M600 720l40-130 40 130Z" fill="#6FE7B7" opacity=".22" filter="url(#soft)"/>
-          <rect width="1280" height="720" fill="none" stroke="rgba(169,217,242,.15)"/>
-          <g stroke="rgba(232,245,252,.5)" stroke-width="1.5" fill="none">
+          <path d="M0 720V420l120-30h1040l120 30v300Z" fill="#0B1810"/>
+          <g transform="translate(200 380)">
+            <rect width="880" height="300" rx="8" fill="url(#ppitch)"/>
+            <g fill="none" stroke="rgba(242,255,244,.85)" stroke-width="3">
+              <rect x="14" y="14" width="852" height="272" rx="4"/>
+              <path d="M440 14v272"/><circle cx="440" cy="150" r="58"/>
+              <path d="M14 80v140h96V80ZM866 80v140h-96V80Z"/>
+            </g>
+            <g opacity=".22" fill="#0A3D1E">
+              <rect x="110" width="110" height="300"/><rect x="330" width="110" height="300"/>
+              <rect x="550" width="110" height="300"/><rect x="770" width="110" height="300"/>
+            </g>
+          </g>
+          <g filter="url(#psoft)">
+            <path d="M150 180 340 430H60Z" fill="rgba(242,255,244,.13)"/>
+            <path d="M1130 180 1220 430H940Z" fill="rgba(242,255,244,.13)"/>
+          </g>
+          <g fill="#F2FFF4">
+            <rect x="138" y="160" width="30" height="9" rx="2" opacity=".95"/>
+            <rect x="1112" y="160" width="30" height="9" rx="2" opacity=".95"/>
+            <path d="M151 169v240h4V169Z" opacity=".5"/>
+            <path d="M1125 169v240h4V169Z" opacity=".5"/>
+          </g>
+          <rect width="1280" height="720" fill="none" stroke="rgba(53,196,99,.2)"/>
+          <g stroke="rgba(242,255,244,.5)" stroke-width="1.5" fill="none">
             <path d="M28 28h34M28 28v34M1252 28h-34M1252 28v34M28 692h34M28 692v-34M1252 692h-34M1252 692v-34"/>
           </g>
         </svg>
         <div class="ff-play" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="#E8F5FC"><path d="M6 3.8v16.4L20 12 6 3.8Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#F2FFF4"><path d="M6 3.8v16.4L20 12 6 3.8Z"/></svg>
         </div>
       </div>
       <div class="ff-bottom">
@@ -518,97 +556,93 @@ footer{padding:clamp(70px,12vh,130px) clamp(20px,5vw,56px) 44px;text-align:cente
       </div>
     </div>
     <p class="ff-note"><em>Konseptbilde — tegnet i kode, ikke KI.</em> Byttes ut med ekte
-    Seedance-footage når Lane B aktiveres: fem 5-sekunders klipp der hvert klipps startbilde
-    er forrige klipps siste frame, sydd sømløst og scrubbet på canvas.</p>
+    Seedance-footage når Lane B aktiveres: dronen letter fra grusen, følger lagene som legges,
+    gresset som rulles ut, oppmerkingen — og lander i flomlyskveld med spill på banen.</p>
 
     <div class="boards">
       <div class="board reveal">
-        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#04101D"/>
-          <path d="M0 34C40 18 70 36 110 22s40 4 50-2" stroke="#6FE7B7" stroke-width="5" fill="none" opacity=".5" stroke-linecap="round"/>
-          <path d="M0 90V64l30-18 36 20 40-30 34 18 20-10v46Z" fill="#0A1B2D"/></svg>
-        <span>K1 · Natten</span>
+        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#2A241C"/>
+          <path d="M0 90V64l50-10 60 6 50-8v38Z" fill="#1C1812"/>
+          <path d="M36 54v-16m1 2 6 4M118 50v-16m1 2 6 4" stroke="#D9FF4C" stroke-width="2" opacity=".6"/></svg>
+        <span>K1 · Grunnen</span>
       </div>
       <div class="board reveal">
-        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#0B2740"/>
-          <g stroke="#A9D9F2" opacity=".6"><path d="M30 0v90M60 0v90M95 0v90M128 0v90" stroke-width="1"/></g>
-          <path d="M0 90V74l40-24 46 26 44-32 30 16v30Z" fill="#081521"/></svg>
-        <span>K2 · Fallet</span>
+        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#241F19"/>
+          <rect y="66" width="160" height="24" fill="#2B2119"/>
+          <rect y="46" width="160" height="20" fill="#4A3E30"/>
+          <rect y="34" width="160" height="12" fill="#28323B"/>
+          <rect y="26" width="160" height="8" fill="#155229"/></svg>
+        <span>K2 · Lagene</span>
       </div>
       <div class="board reveal">
-        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#051B30"/>
-          <path d="M55 90 80 18l25 72Z" fill="#0E3E63"/>
-          <path d="M70 90 80 48l10 42Z" fill="#6FE7B7" opacity=".3"/></svg>
-        <span>K3 · Isen</span>
+        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#116234"/>
+          <rect width="96" height="90" fill="#1E9A4B"/>
+          <rect x="96" width="10" height="90" fill="#F2FFF4" opacity=".85"/>
+          <g opacity=".25" fill="#0A3D1E"><rect x="18" width="20" height="90"/><rect x="58" width="20" height="90"/></g></svg>
+        <span>K3 · Gresset</span>
       </div>
       <div class="board reveal">
-        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#03101E"/>
-          <path d="M80 16c0 0-13 20-13 30a13 13 0 0 0 26 0c0-10-13-30-13-30Z" fill="none" stroke="#A9D9F2" stroke-width="1.4"/>
-          <ellipse cx="80" cy="72" rx="26" ry="6" fill="none" stroke="#6FE7B7" opacity=".6"/></svg>
-        <span>K4 · Dråpen</span>
+        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#1E9A4B"/>
+          <g fill="none" stroke="#F2FFF4" stroke-width="2.5" opacity=".9">
+            <circle cx="80" cy="45" r="20"/><path d="M80 0v90M8 8h144v74H8Z"/></g></svg>
+        <span>K4 · Oppmerking</span>
       </div>
       <div class="board reveal">
-        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#020A12"/>
-          <path d="M74 14h12v10c0 4 9 8 9 18v34a10 10 0 0 1-10 10H75a10 10 0 0 1-10-10V42c0-10 9-14 9-18V14Z"
-            fill="none" stroke="#A9D9F2" stroke-width="1.3"/></svg>
-        <span>K5 · Kilden</span>
+        <svg viewBox="0 0 160 90"><rect width="160" height="90" fill="#050A06"/>
+          <path d="M28 12 76 90H0Z" fill="rgba(242,255,244,.12)"/>
+          <path d="M132 12 160 90H92Z" fill="rgba(242,255,244,.12)"/>
+          <rect y="74" width="160" height="16" fill="#0E5A2B"/>
+          <rect x="22" y="8" width="14" height="5" rx="1" fill="#F2FFF4"/>
+          <rect x="126" y="8" width="14" height="5" rx="1" fill="#F2FFF4"/></svg>
+        <span>K5 · Kampkveld</span>
       </div>
     </div>
   </section>
 
-  <!-- kolleksjon -->
-  <section class="blk" id="kolleksjon">
+  <section class="blk" id="referanser">
     <div class="blk-head">
-      <div class="kicker">Kolleksjonen</div>
-      <h2 class="reveal">Tre måter å drikke<br>tusen år på</h2>
+      <div class="kicker">Referanser</div>
+      <h2 class="reveal">Bygget av <em>PST</em></h2>
     </div>
-    <div class="cards">
-      <div class="card reveal">
-        <svg viewBox="0 0 60 150"><path d="M24 6h12v12c0 5 10 9 10 22v88a12 12 0 0 1-12 12H26a12 12 0 0 1-12-12V40c0-13 10-17 10-22V6Z" fill="none" stroke="#A9D9F2" stroke-width="1.4"/><text x="30" y="82" text-anchor="middle" fill="#E8F5FC" font-family="Unbounded,sans-serif" font-size="7" letter-spacing="2">ISBRE</text></svg>
-        <h3>STILLE</h3>
-        <p class="desc">0,5 L · Slik breen slapp det.</p>
-        <div class="pris">KR 29</div>
-      </div>
-      <div class="card reveal">
-        <svg viewBox="0 0 60 150"><path d="M24 6h12v12c0 5 10 9 10 22v88a12 12 0 0 1-12 12H26a12 12 0 0 1-12-12V40c0-13 10-17 10-22V6Z" fill="none" stroke="#6FE7B7" stroke-width="1.4"/><g fill="#6FE7B7" opacity=".7"><circle cx="24" cy="120" r="1.4"/><circle cx="33" cy="104" r="1.1"/><circle cx="27" cy="88" r="1.3"/><circle cx="36" cy="70" r="1"/><circle cx="25" cy="56" r="1.2"/></g><text x="30" y="82" text-anchor="middle" fill="#E8F5FC" font-family="Unbounded,sans-serif" font-size="7" letter-spacing="2">ISBRE</text></svg>
-        <h3>BRIS</h3>
-        <p class="desc">0,5 L · Forsiktig perlende.</p>
-        <div class="pris">KR 32</div>
-      </div>
-      <div class="card reveal">
-        <svg viewBox="0 0 60 150"><path d="M22 6h16v14c0 6 12 10 12 24v82a14 14 0 0 1-14 14H24a14 14 0 0 1-14-14V44c0-14 12-18 12-24V6Z" fill="none" stroke="#E8F5FC" stroke-width="1.4"/><text x="30" y="84" text-anchor="middle" fill="#E8F5FC" font-family="Unbounded,sans-serif" font-size="7" letter-spacing="2">ISBRE</text><text x="30" y="96" text-anchor="middle" fill="rgba(232,245,252,.5)" font-family="Manrope,sans-serif" font-size="5">GLASS</text></svg>
-        <h3>KILDE</h3>
-        <p class="desc">0,75 L · Glass, til bordet.</p>
-        <div class="pris">KR 49</div>
-      </div>
+    <div class="refs">
+      <div class="ref reveal"><h3>Hortemo Idrettsanlegg</h3><p>Komplett idrettsanlegg, Songdalen.</p><span class="tag">Kunstgress</span></div>
+      <div class="ref reveal"><h3>Nord Sprint IL</h3><p>Anlegg levert og montert.</p><span class="tag">Nærmiljø</span></div>
+      <div class="ref reveal"><h3>Flere prosjekter</h3><p>Se hele referanselisten — fra binger til stadioner.</p><span class="tag">pst-sa.no/referanser</span></div>
     </div>
   </section>
 
-  <!-- manifest -->
-  <section class="blk">
-    <div class="mani">
-      <div class="kicker" style="margin-bottom:26px">Manifest</div>
-      <p>«Vi laget ikke vannet. Vi ventet på det. Alt vi gjør, er å ikke ødelegge
-      noe som brukte tusen år på å bli perfekt.»</p>
-      <cite>ISBRE · Jostedalen</cite>
+  <section class="blk" id="kontakt">
+    <div class="kontakt">
+      <div class="kd">
+        <div class="kicker">Kontakt</div>
+        <h2 style="font-size:clamp(2rem,4.6vw,3.4rem);margin-top:14px">Har dere en <em style="font-style:normal;color:var(--green)">grusbane</em><br>som fortjener mer?</h2>
+        <p>Fortell oss om tomta, banen eller bingen dere drømmer om — vi tar befaringen,
+        og kommer tilbake med et ærlig forslag.</p>
+        <a class="cta" href="mailto:Sportsanlegg@pst-sa.no">Be om tilbud</a>
+      </div>
+      <ul class="klist">
+        <li><b>Adresse</b><span>Skibåsen 35 D, 4636 Kristiansand S</span></li>
+        <li><b>E-post</b><a href="mailto:Sportsanlegg@pst-sa.no"><span>Sportsanlegg@pst-sa.no</span></a></li>
+        <li><b>Org.nr</b><span>920 640 958</span></li>
+        <li><b>Partner</b><span>Greenfields / TenCate Grass</span></li>
+      </ul>
     </div>
   </section>
 
   <div class="mq">
     <div class="mq-track" id="mqTrack">
-      <span>TUSEN ÅR PÅ VEI — <em>Isbre</em> — SMELTEVANN — <em>fra norske breer</em> — </span><span>TUSEN ÅR PÅ VEI — <em>Isbre</em> — SMELTEVANN — <em>fra norske breer</em> — </span>
+      <span>Fra grus til gress — <em>PST Sportsanlegg</em> — Totalleverandør — <em>Kristiansand</em> — </span><span>Fra grus til gress — <em>PST Sportsanlegg</em> — Totalleverandør — <em>Kristiansand</em> — </span>
     </div>
   </div>
 
   <footer>
-    <div class="kicker">Smak tiden</div>
-    <a class="cta" href="#">FINN DIN FORHANDLER</a>
     <div class="socials">
-      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.81s-.01 3.54-.07 4.81c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.81.07s-3.54-.01-4.81-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.54 2.2 15.16 2.2 12s.01-3.54.07-4.81c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.2 8.84 2.2 12 2.2Zm0 1.8c-3.1 0-3.47.01-4.7.07-1.08.05-1.67.23-2.06.38-.52.2-.9.45-1.28.84-.4.39-.64.76-.84 1.28-.15.4-.33.98-.38 2.06-.06 1.23-.07 1.6-.07 4.7s.01 3.47.07 4.7c.05 1.08.23 1.67.38 2.06.2.52.45.9.84 1.28.39.4.76.64 1.28.84.4.15.98.33 2.06.38 1.23.06 1.6.07 4.7.07s3.47-.01 4.7-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.9-.45 1.28-.84.4-.39.64-.76.84-1.28.15-.4.33-.98.38-2.06.06-1.23.07-1.6.07-4.7s-.01-3.47-.07-4.7c-.05-1.08-.23-1.67-.38-2.06a3.4 3.4 0 0 0-.84-1.28 3.4 3.4 0 0 0-1.28-.84c-.4-.15-.98-.33-2.06-.38-1.23-.06-1.6-.07-4.7-.07Zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 8.46a3.33 3.33 0 1 0 0-6.66 3.33 3.33 0 0 0 0 6.66Zm6.54-8.67a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg></a>
-      <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.86 7.84L23.2 22h-6.32l-4.95-6.47L6.27 22H3.15l7.34-8.38L2.4 2h6.48l4.47 5.91L18.9 2Zm-1.1 18.13h1.72L7.98 3.77H6.13l11.66 16.36Z"/></svg></a>
-      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.6a3 3 0 0 0-2.12-2.13C19.5 4 12 4 12 4s-7.5 0-9.38.47A3 3 0 0 0 .5 6.6 31.2 31.2 0 0 0 0 12c0 1.82.17 3.63.5 5.4a3 3 0 0 0 2.12 2.13C4.5 20 12 20 12 20s7.5 0 9.38-.47a3 3 0 0 0 2.12-2.13c.33-1.77.5-3.58.5-5.4 0-1.82-.17-3.63-.5-5.4ZM9.6 15.6V8.4l6.27 3.6L9.6 15.6Z"/></svg></a>
+      <a href="https://www.facebook.com/PSTsportsanlegg/" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05v-2.66c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07Z"/></svg></a>
+      <a href="https://www.instagram.com/pst_sportsanlegg/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.81s-.01 3.54-.07 4.81c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.81.07s-3.54-.01-4.81-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.54 2.2 15.16 2.2 12s.01-3.54.07-4.81c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.2 8.84 2.2 12 2.2Zm0 1.8c-3.1 0-3.47.01-4.7.07-1.08.05-1.67.23-2.06.38-.52.2-.9.45-1.28.84-.4.39-.64.76-.84 1.28-.15.4-.33.98-.38 2.06-.06 1.23-.07 1.6-.07 4.7s.01 3.47.07 4.7c.05 1.08.23 1.67.38 2.06.2.52.45.9.84 1.28.39.4.76.64 1.28.84.4.15.98.33 2.06.38 1.23.06 1.6.07 4.7.07s3.47-.01 4.7-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.9-.45 1.28-.84.4-.39.64-.76.84-1.28.15-.4.33-.98.38-2.06.06-1.23.07-1.6.07-4.7s-.01-3.47-.07-4.7c-.05-1.08-.23-1.67-.38-2.06a3.4 3.4 0 0 0-.84-1.28 3.4 3.4 0 0 0-1.28-.84c-.4-.15-.98-.33-2.06-.38-1.23-.06-1.6-.07-4.7-.07Zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26Zm0 8.46a3.33 3.33 0 1 0 0-6.66 3.33 3.33 0 0 0 0 6.66Zm6.54-8.67a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg></a>
+      <a href="https://no.linkedin.com/company/pst-sportsanlegg-as" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
     </div>
-    <p class="fine">© 2026 ISBRE — demonstrasjon bygget med scroll-film-studio · Lane A (ren kode) ·
-    Higgsfield-footage kommer i Lane B</p>
+    <p class="fine">© 2026 PST Sportsanlegg AS · Org.nr 920 640 958 · Skibåsen 35 D, Kristiansand<br>
+    Redesignkonsept bygget med scroll-film-studio · Lane A (ren kode) · Higgsfield-footage kommer i Lane B</p>
   </footer>
 </main>
 
@@ -624,7 +658,6 @@ var JUMP = new URLSearchParams(location.search).get('jump');
 var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (JUMP !== null) history.scrollRestoration = 'manual';
 
-/* ---------- Lenis (skip on ?jump and reduced motion) ---------- */
 if (!RM && JUMP === null){
   var lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
   lenis.on('scroll', ScrollTrigger.update);
@@ -632,30 +665,18 @@ if (!RM && JUMP === null){
   gsap.ticker.lagSmoothing(0);
 }
 
-/* ---------- hero char-split ---------- */
-var wm = document.getElementById('wordmark');
-var chars = wm.textContent.split('');
-wm.textContent = '';
-chars.forEach(function(c){
-  var s = document.createElement('span');
-  s.className = 'ch'; s.textContent = c; wm.appendChild(s);
+/* hero word-split */
+document.querySelectorAll('#wordmark .w').forEach(function(w){
+  w.dataset.word.split('').forEach(function(c){
+    var s = document.createElement('span');
+    s.className = 'ch'; s.textContent = c; w.appendChild(s);
+  });
 });
 if (!RM){
-  gsap.from('.hero .ch', { yPercent: 120, duration: 1.15, ease: 'power4.out',
-    stagger: 0.07, delay: 0.25 });
+  gsap.from('.hero .ch', { yPercent: 118, duration: 1.05, ease: 'power4.out',
+    stagger: 0.045, delay: 0.25 });
   gsap.from('.hero-kicker, .hero-sub', { opacity: 0, y: 18, duration: 1,
-    ease: 'power2.out', stagger: 0.2, delay: 0.7 });
-}
-
-/* ---------- falling streaks (built once) ---------- */
-var streaks = document.getElementById('streaks');
-for (var i = 0; i < 14; i++){
-  var st = document.createElement('div');
-  st.className = 'streak';
-  st.style.left = (3 + Math.random() * 94) + '%';
-  st.style.opacity = (0.25 + Math.random() * 0.5).toFixed(2);
-  st.style.transform = 'scaleY(' + (0.5 + Math.random()).toFixed(2) + ')';
-  streaks.appendChild(st);
+    ease: 'power2.out', stagger: 0.2, delay: 0.65 });
 }
 
 var beats = {};
@@ -667,164 +688,157 @@ function chap(label){
 }
 
 if (!RM){
-  /* ================= PINNED SCENES FIRST (ordering law) ================= */
+  /* ============ PINNED SCENES FIRST (ordering law) ============ */
 
-  /* 02 FALLET — descend */
-  var tlF = gsap.timeline({ scrollTrigger: {
-    trigger: '#fallet', start: 'top top', end: '+=170%', pin: true, scrub: true,
-    onToggle: chap('02 — Fallet') }});
-  tlF.fromTo('#fallet .ridge-copy', { scale: 1, yPercent: 0 },
-      { scale: 2.6, yPercent: 46, opacity: 0, ease: 'power1.in', duration: 1 }, 0)
-    .fromTo('#streaks', { yPercent: -18 }, { yPercent: 18, duration: 1 }, 0)
-    .fromTo(beats.f1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .16 }, .04)
-    .to(beats.f1, { opacity: 0, y: -44, duration: .14 }, .34)
-    .fromTo(beats.f2, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .16 }, .5)
-    .to(beats.f2, { opacity: 0, y: -44, duration: .14 }, .84);
+  /* 02 GRUNNARBEID — layers stack */
+  var tlG = gsap.timeline({ scrollTrigger: {
+    trigger: '#grunnarbeid', start: 'top top', end: '+=170%', pin: true, scrub: true,
+    onToggle: chap('02 — Grunnarbeid') }});
+  tlG.fromTo('.l1', { yPercent: 100 }, { yPercent: 0, ease: 'power1.out', duration: .18 }, .04)
+    .fromTo('.l2', { yPercent: 130 }, { yPercent: 0, ease: 'power1.out', duration: .18 }, .2)
+    .fromTo('.l3', { yPercent: 240 }, { yPercent: 0, ease: 'power1.out', duration: .16 }, .36)
+    .fromTo('.l4', { yPercent: 380 }, { yPercent: 0, ease: 'power1.out', duration: .16 }, .5)
+    .fromTo(beats.g1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .14 }, .56)
+    .to(beats.g1, { opacity: 0, y: -40, duration: .12 }, .86);
 
-  /* 03 ISEN — circle reveal into the crevasse */
-  var tlI = gsap.timeline({ scrollTrigger: {
-    trigger: '#isen', start: 'top top', end: '+=190%', pin: true, scrub: true,
-    onToggle: chap('03 — Isen') }});
-  tlI.fromTo('#iceWorld',
-      { clipPath: 'circle(9% at 50% 62%)' },
-      { clipPath: 'circle(125% at 50% 55%)', ease: 'power1.inOut', duration: .55 }, 0)
-    .fromTo('#crystal', { scale: .5, rotate: -14, opacity: 0 },
-      { scale: 1, rotate: 10, opacity: .9, ease: 'none', duration: 1 }, 0)
-    .fromTo(beats.i1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .14 }, .12)
-    .to(beats.i1, { opacity: 0, y: -44, duration: .12 }, .4)
-    .fromTo(beats.i2, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .14 }, .56)
-    .to(beats.i2, { opacity: 0, y: -44, duration: .12 }, .88);
+  /* 03 GRESSET — turf sweep + markings */
+  var tlT = gsap.timeline({ scrollTrigger: {
+    trigger: '#gresset', start: 'top top', end: '+=180%', pin: true, scrub: true,
+    onToggle: chap('03 — Gresset') }});
+  tlT.fromTo('#turf', { clipPath: 'inset(0 100% 0 0)' },
+      { clipPath: 'inset(0 0% 0 0)', ease: 'power1.inOut', duration: .42 }, 0)
+    .fromTo(beats.t1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .16)
+    .to(beats.t1, { opacity: 0, y: -40, duration: .1 }, .42)
+    .fromTo('#midline', { scaleY: 0, transformOrigin: '50% 0%' },
+      { opacity: 1, scaleY: 1, duration: .14 }, .5)
+    .fromTo('#centercircle', { scale: .4, opacity: 0 },
+      { scale: 1, opacity: 1, duration: .16 }, .58)
+    .fromTo(beats.t2, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .68)
+    .to(beats.t2, { opacity: 0, y: -40, duration: .1 }, .9);
 
-  /* 04 REISEN — horizontal run */
+  /* 04 ANLEGGENE — horizontal run */
   var track = document.getElementById('track');
   var runDist = function(){ return track.scrollWidth - window.innerWidth; };
   var runTween = gsap.to(track, {
     x: function(){ return -runDist(); }, ease: 'none',
-    scrollTrigger: { trigger: '#reisen', start: 'top top',
+    scrollTrigger: { trigger: '#anleggene', start: 'top top',
       end: function(){ return '+=' + runDist(); },
       pin: true, scrub: true, invalidateOnRefresh: true,
-      onToggle: chap('04 — Reisen') }});
+      onToggle: chap('04 — Anleggene') }});
   gsap.utils.toArray('.p-num').forEach(function(n){
     gsap.fromTo(n, { xPercent: 26 }, { xPercent: -26, ease: 'none',
       scrollTrigger: { trigger: n, containerAnimation: runTween,
         start: 'left right', end: 'right left', scrub: true }});
   });
 
-  /* 05 DRÅPEN — fall, land, ripple, count */
-  var tlD = gsap.timeline({ scrollTrigger: {
-    trigger: '#drapen', start: 'top top', end: '+=170%', pin: true, scrub: true,
-    onToggle: chap('05 — Dråpen') }});
-  tlD.fromTo('#dropSvg', { y: '-30vh', opacity: 0 },
-      { y: '52vh', opacity: 1, ease: 'power1.in', duration: .4 }, 0)
-    .to('#dropSvg', { opacity: 0, scale: .6, transformOrigin: '50% 100%', duration: .06 }, .4)
-    .fromTo('#ripples .rip',
-      { scale: .25, opacity: 0, transformOrigin: '50% 50%' },
-      { scale: function(idx){ return 1 + idx * 0.9; },
-        opacity: .8, stagger: .05, duration: .2, ease: 'power2.out' }, .42)
-    .to('#ripples .rip', { opacity: 0, stagger: .04, duration: .18 }, .62)
-    .fromTo(beats.d1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .5)
-    .to(beats.d1, { opacity: 0, y: -30, duration: .1 }, .78)
-    .fromTo('#stats', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .12 }, .62);
+  /* 05 FLOMLYS — lights ignite */
+  var tlL = gsap.timeline({ scrollTrigger: {
+    trigger: '#flomlyset', start: 'top top', end: '+=170%', pin: true, scrub: true,
+    onToggle: chap('05 — Flomlys') }});
+  tlL.to('#lampsL', { opacity: 1, duration: .08 }, .14)
+    .to('#coneL', { opacity: 1, duration: .16 }, .16)
+    .to('#lampsR', { opacity: 1, duration: .08 }, .3)
+    .to('#coneR', { opacity: 1, duration: .16 }, .32)
+    .to('#glowpitch', { opacity: 1, duration: .2 }, .36)
+    .fromTo(beats.l1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .44)
+    .to(beats.l1, { opacity: 0, y: -36, duration: .1 }, .72)
+    .fromTo('#stats', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .12 }, .6);
   document.querySelectorAll('.cnt').forEach(function(el){
-    tlD.fromTo(el, { textContent: 0 },
-      { textContent: +el.dataset.to, snap: { textContent: 1 }, duration: .3, ease: 'none' }, .62);
+    tlL.fromTo(el, { textContent: 0 },
+      { textContent: +el.dataset.to, snap: { textContent: 1 }, duration: .28, ease: 'none' }, .6);
   });
 
-  /* 06 KILDEN — bottle line-draw */
-  document.querySelectorAll('.bl').forEach(function(p){
+  /* 06 KAMPKLART — goal draw + ball */
+  document.querySelectorAll('.gl').forEach(function(p){
     var L = p.getTotalLength();
     p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
   });
-  var tlB = gsap.timeline({ scrollTrigger: {
-    trigger: '#flasken', start: 'top top', end: '+=190%', pin: true, scrub: true,
-    onToggle: chap('06 — Kilden') }});
-  tlB.to('.bl', { strokeDashoffset: 0, stagger: .06, duration: .5, ease: 'none' }, 0)
-    .fromTo('#bottleWrap', { scale: .92 }, { scale: 1, duration: .9, ease: 'none' }, 0)
-    .to('#bottleLabel', { opacity: 1, duration: .12 }, .52)
-    .fromTo(beats.b1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .58)
-    .to('#melt', { opacity: 1, duration: .2 }, .8);
+  var tlK = gsap.timeline({ scrollTrigger: {
+    trigger: '#kampklart', start: 'top top', end: '+=180%', pin: true, scrub: true,
+    onToggle: chap('06 — Kampklart') }});
+  tlK.to('.gl', { strokeDashoffset: 0, stagger: .07, duration: .42, ease: 'none' }, 0)
+    .to('#goalNet', { opacity: 1, duration: .14 }, .4)
+    .fromTo(beats.k1, { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: .12 }, .5)
+    .to('#ball', { attr: { cx: 380 }, opacity: 1, duration: .22, ease: 'power1.out' }, .58)
+    .to('#ballshadow', { attr: { cx: 380 }, opacity: .6, duration: .22, ease: 'power1.out' }, .58)
+    .to('#melt', { opacity: 1, duration: .2 }, .82);
 
-  /* ================= AMBIENT AFTER PINS (ordering law) ================= */
+  /* ============ AMBIENT AFTER PINS ============ */
 
-  /* hero parallax out */
-  gsap.to('#ridgeFar', { yPercent: 26, ease: 'none', scrollTrigger: {
-    trigger: '#natten', start: 'top top', end: 'bottom top', scrub: true }});
-  gsap.to('#ridgeNear', { yPercent: 12, ease: 'none', scrollTrigger: {
-    trigger: '#natten', start: 'top top', end: 'bottom top', scrub: true }});
-  gsap.to('.hero-core', { yPercent: -18, opacity: 0, ease: 'none', scrollTrigger: {
-    trigger: '#natten', start: 'top top', end: '75% top', scrub: true }});
+  gsap.to('.stakes', { yPercent: 22, ease: 'none', scrollTrigger: {
+    trigger: '#grunnen', start: 'top top', end: 'bottom top', scrub: true }});
+  gsap.to('.hero-core', { yPercent: -16, opacity: 0, ease: 'none', scrollTrigger: {
+    trigger: '#grunnen', start: 'top top', end: '75% top', scrub: true }});
 
-  /* chapter readout — unpinned sections (pinned scenes set theirs on the pin trigger) */
-  [['#natten', '01 — Natten'], ['#film', 'Neste kapittel'], ['#kolleksjon', 'Kolleksjonen'],
-   ['footer', 'Isbre — Jostedalen']]
+  [['#grunnen', '01 — Grunnen'], ['#prosess', 'Slik jobber vi'], ['#film', 'Neste kapittel'],
+   ['#referanser', 'Referanser'], ['#kontakt', 'Kontakt'], ['footer', 'PST Sportsanlegg']]
     .forEach(function(c){
       ScrollTrigger.create({ trigger: c[0], start: 'top 55%', end: 'bottom 55%',
         onToggle: chap(c[1]) });
     });
 
-  /* page progress hairline */
   gsap.to('#roFill', { scaleX: 1, ease: 'none', scrollTrigger: {
     trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: true }});
 
-  /* content reveals */
   gsap.utils.toArray('.reveal').forEach(function(el){
     gsap.to(el, { clipPath: 'inset(0 0 0% 0)', duration: 1.1, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 82%', once: true }});
   });
 
-  /* marquee drift + velocity skew */
-  gsap.to('#mqTrack', { xPercent: -50, ease: 'none', duration: 24, repeat: -1 });
+  gsap.to('#mqTrack', { xPercent: -50, ease: 'none', duration: 22, repeat: -1 });
   var skewTo = gsap.quickTo('#mqTrack', 'skewX', { duration: .4, ease: 'power2.out' });
   ScrollTrigger.create({ trigger: '.mq', start: 'top bottom', end: 'bottom top',
     onUpdate: function(self){
       skewTo(gsap.utils.clamp(-8, 8, self.getVelocity() / -300));
     }});
 } else {
-  /* reduced motion: settle final states */
   document.querySelectorAll('.cnt').forEach(function(el){ el.textContent = el.dataset.to; });
-  document.getElementById('bottleLabel').setAttribute('opacity', '1');
+  document.getElementById('lampsL').setAttribute('opacity', '1');
+  document.getElementById('lampsR').setAttribute('opacity', '1');
+  document.getElementById('goalNet').setAttribute('opacity', '1');
+  document.querySelectorAll('.gl').forEach(function(p){ p.style.strokeDasharray = 'none'; });
 }
 
-/* ---------- snow canvas (ambient hero layer) ---------- */
+/* ---------- dust canvas (ambient hero layer) ---------- */
 if (!RM){
-  var cv = document.getElementById('snow'), ctx = cv.getContext('2d');
-  var DPR = Math.min(devicePixelRatio || 1, 1.5), W, H, flakes = [];
+  var cv = document.getElementById('dust'), ctx = cv.getContext('2d');
+  var DPR = Math.min(devicePixelRatio || 1, 1.5), W, H, motes = [];
   var sprite = document.createElement('canvas'); sprite.width = sprite.height = 32;
   var sg = sprite.getContext('2d');
   var grad = sg.createRadialGradient(16, 16, 0, 16, 16, 16);
-  grad.addColorStop(0, 'rgba(232,245,252,1)');
-  grad.addColorStop(.4, 'rgba(232,245,252,.5)');
-  grad.addColorStop(1, 'rgba(232,245,252,0)');
+  grad.addColorStop(0, 'rgba(217,255,76,.9)');
+  grad.addColorStop(.4, 'rgba(200,190,140,.4)');
+  grad.addColorStop(1, 'rgba(200,190,140,0)');
   sg.fillStyle = grad; sg.fillRect(0, 0, 32, 32);
-  function sizeSnow(){
+  function sizeDust(){
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W * DPR; cv.height = H * DPR;
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   }
-  sizeSnow(); addEventListener('resize', sizeSnow);
-  for (var f = 0; f < 90; f++){
-    flakes.push({ x: Math.random(), y: Math.random(),
+  sizeDust(); addEventListener('resize', sizeDust);
+  for (var f = 0; f < 70; f++){
+    motes.push({ x: Math.random(), y: .35 + Math.random() * .65,
       z: 0.25 + Math.random() * 0.75, ph: Math.random() * Math.PI * 2 });
   }
   var t0 = 0;
   gsap.ticker.add(function(time){
-    if (scrollY > innerHeight * 1.25) return;      // hero gone — stop drawing
+    if (scrollY > innerHeight * 1.25) return;
     var dt = Math.min(0.05, time - t0); t0 = time;
     ctx.clearRect(0, 0, W, H);
-    for (var i = 0; i < flakes.length; i++){
-      var p = flakes[i];
-      p.y += dt * 0.045 * p.z; p.ph += dt * 1.6;
-      p.x += Math.sin(p.ph) * 0.00022 * p.z;
-      if (p.y > 1.02){ p.y = -0.02; p.x = Math.random(); }
-      var s = 2.2 + p.z * 5.5;
-      ctx.globalAlpha = (0.25 + p.z * 0.55) * (0.75 + 0.25 * Math.sin(p.ph * 2));
+    for (var i = 0; i < motes.length; i++){
+      var p = motes[i];
+      p.y -= dt * 0.012 * p.z; p.ph += dt * 1.1;
+      p.x += Math.sin(p.ph) * 0.00016 * p.z + dt * 0.006 * p.z;
+      if (p.y < 0.28 || p.x > 1.02){ p.y = 1.02; p.x = Math.random(); }
+      var s = 1.6 + p.z * 4;
+      ctx.globalAlpha = (0.12 + p.z * 0.4) * (0.7 + 0.3 * Math.sin(p.ph * 2));
       ctx.drawImage(sprite, p.x * W - s / 2, p.y * H - s / 2, s, s);
     }
     ctx.globalAlpha = 1;
   });
 }
 
-/* ---------- jank meter (console) ---------- */
+/* ---------- jank meter ---------- */
 (function(){
   var last = performance.now(), max = 0;
   function tick(){
@@ -839,7 +853,7 @@ if (!RM){
   }, 2000);
 })();
 
-/* ---------- dev contract: ?jump + __ready ---------- */
+/* ---------- dev contract ---------- */
 function settleAndReady(){
   ScrollTrigger.refresh();
   if (JUMP !== null){
