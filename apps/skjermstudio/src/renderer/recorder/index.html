@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; media-src 'self' blob: file:; style-src 'self' 'unsafe-inline'" />
+  <title>Skjermstudio</title>
+  <link rel="stylesheet" href="../felles.css" />
+  <link rel="stylesheet" href="opptak.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="topp">
+      <div>
+        <h1>Skjermstudio</h1>
+        <p class="hint">Alt tas opp og lagres lokalt på denne maskinen. Ingenting sendes ut.</p>
+      </div>
+      <div class="rad">
+        <span id="ffmpegStatus" class="merkelapp">Sjekker FFmpeg …</span>
+        <button class="stille" id="apneMappe">Opptaksmappe</button>
+      </div>
+    </header>
+
+    <main class="innhold">
+      <section class="venstre kolonne">
+        <div class="kort">
+          <div class="rad" style="margin-bottom:12px">
+            <h2>Hva skal tas opp?</h2>
+            <span class="mellomrom"></span>
+            <button class="stille" id="oppdaterKilder">Oppdater</button>
+          </div>
+          <div class="filter rad">
+            <button class="aktiv" data-filter="alle">Alle</button>
+            <button data-filter="skjerm">Skjermer</button>
+            <button data-filter="vindu">Vinduer</button>
+          </div>
+          <div id="kildeliste" class="kildeliste"></div>
+        </div>
+
+        <div class="kort">
+          <h2 style="margin-bottom:12px">Område</h2>
+          <div class="rad" style="gap:8px; flex-wrap:wrap">
+            <button class="aktiv" data-omrade="hele">Hele kilden</button>
+            <button data-omrade="utsnitt">Velg utsnitt i editoren</button>
+          </div>
+          <p class="hint" style="margin-top:10px">
+            Opptaket lagres alltid i full oppløsning. Beskjæring gjøres i redigeringen,
+            slik at originalen beholdes uendret.
+          </p>
+        </div>
+      </section>
+
+      <section class="hoyre kolonne">
+        <div class="kort">
+          <h2 style="margin-bottom:14px">Lyd og kamera</h2>
+
+          <div class="felt">
+            <label class="bryter">
+              <input type="checkbox" id="brukMik" checked /><span class="spor"></span>
+              <span>Mikrofon</span>
+            </label>
+            <select id="mikrofon"></select>
+          </div>
+
+          <div class="felt">
+            <label class="bryter">
+              <input type="checkbox" id="brukSystemlyd" checked /><span class="spor"></span>
+              <span>Lyd fra PC-en</span>
+            </label>
+            <p class="hint" id="systemlydHint">Tas opp sammen med skjermen.</p>
+          </div>
+
+          <div class="felt">
+            <label class="bryter">
+              <input type="checkbox" id="brukKamera" checked /><span class="spor"></span>
+              <span>Kamera</span>
+            </label>
+            <select id="kamera"></select>
+          </div>
+
+          <div class="felt" id="bobleFelt">
+            <label>Boblestørrelse <span id="bobleVerdi">28 %</span></label>
+            <input type="range" id="bobleStorrelse" min="12" max="55" value="28" />
+            <div class="rad" style="margin-top:8px">
+              <button id="visBoble">Vis boble</button>
+              <span class="hint">Dra boblen dit du vil ha den.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kort">
+          <h2 style="margin-bottom:12px">Hurtigtaster</h2>
+          <div class="felt">
+            <label>Start / stopp opptak</label>
+            <input type="text" id="hurtigtastStart" readonly />
+            <p class="hint">Virker også når appen ikke er i fokus. Klikk og trykk ny tastekombinasjon.</p>
+          </div>
+          <div class="felt">
+            <label>Pause / fortsett</label>
+            <input type="text" id="hurtigtastPause" readonly />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bunn">
+      <div class="status">
+        <span id="statusPrikk" class="prikk"></span>
+        <span id="statusTekst">Klar til opptak</span>
+        <span id="statusTid" class="tid"></span>
+      </div>
+      <div class="rad">
+        <button id="apneProsjekt" class="stille">Åpne prosjekt …</button>
+        <button id="startStopp" class="primar stor">Start opptak</button>
+      </div>
+    </footer>
+
+    <div id="sisteOpptak" class="siste"></div>
+  </div>
+
+  <div id="fremdrift" class="fremdrift skjult">
+    <div class="kort" style="min-width:380px; text-align:center">
+      <h2 id="fremdriftTekst">Behandler opptak …</h2>
+      <div class="stolpe"><div id="fremdriftFyll"></div></div>
+      <p class="hint" style="margin-top:10px">Opptaket konverteres til MP4. Dette gjøres lokalt.</p>
+    </div>
+  </div>
+
+  <script type="module" src="opptak.js"></script>
+</body>
+</html>

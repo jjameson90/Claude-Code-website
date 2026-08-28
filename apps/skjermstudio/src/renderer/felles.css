@@ -1,0 +1,119 @@
+/* Felles designsystem for alle vinduene i Skjermstudio. */
+:root {
+  --bg: #101216;
+  --bg-2: #171a20;
+  --bg-3: #1e222a;
+  --line: #2a2f3a;
+  --line-sterk: #3a4150;
+  --tekst: #e8ecf3;
+  --tekst-svak: #9aa4b5;
+  --aksent: #4f8cff;
+  --aksent-mork: #3a6fd8;
+  --rod: #ff4d5a;
+  --gronn: #34d399;
+  --gul: #fbbf24;
+  --radius: 10px;
+  --radius-stor: 14px;
+  --skygge: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--tekst);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: 20px; }
+h2 { font-size: 15px; }
+h3 { font-size: 13px; color: var(--tekst-svak); text-transform: uppercase; letter-spacing: 0.06em; }
+
+button {
+  font: inherit;
+  color: var(--tekst);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 9px 14px;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.06s ease;
+}
+button:hover:not(:disabled) { background: #262b35; border-color: var(--line-sterk); }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+button.primar { background: var(--aksent); border-color: var(--aksent); color: #fff; font-weight: 600; }
+button.primar:hover:not(:disabled) { background: var(--aksent-mork); border-color: var(--aksent-mork); }
+button.fare { background: var(--rod); border-color: var(--rod); color: #fff; font-weight: 600; }
+button.fare:hover:not(:disabled) { background: #e03a47; border-color: #e03a47; }
+button.stille { background: transparent; border-color: transparent; color: var(--tekst-svak); }
+button.stille:hover:not(:disabled) { background: var(--bg-3); color: var(--tekst); }
+button.aktiv { border-color: var(--aksent); color: var(--aksent); }
+
+select, input[type="text"], input[type="number"] {
+  font: inherit;
+  color: var(--tekst);
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 8px 10px;
+  width: 100%;
+}
+select:focus, input:focus { outline: none; border-color: var(--aksent); }
+
+input[type="range"] { width: 100%; accent-color: var(--aksent); }
+
+label { display: block; font-size: 12px; color: var(--tekst-svak); margin-bottom: 6px; }
+
+.kort {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-stor);
+  padding: 16px;
+}
+
+.rad { display: flex; align-items: center; gap: 10px; }
+.kolonne { display: flex; flex-direction: column; gap: 12px; }
+.mellomrom { flex: 1; }
+
+/* Av/på-bryter */
+.bryter { display: flex; align-items: center; gap: 10px; cursor: pointer; margin: 0; font-size: 14px; color: var(--tekst); }
+.bryter input { display: none; }
+.bryter .spor {
+  width: 40px; height: 22px; border-radius: 11px; background: var(--bg-3);
+  border: 1px solid var(--line); position: relative; transition: background 0.15s ease, border-color 0.15s ease; flex: none;
+}
+.bryter .spor::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+  border-radius: 50%; background: var(--tekst-svak); transition: transform 0.15s ease, background 0.15s ease;
+}
+.bryter input:checked + .spor { background: rgba(79, 140, 255, 0.25); border-color: var(--aksent); }
+.bryter input:checked + .spor::after { transform: translateX(18px); background: var(--aksent); }
+
+.merkelapp {
+  font-size: 11px; padding: 3px 8px; border-radius: 999px;
+  background: var(--bg-3); color: var(--tekst-svak); border: 1px solid var(--line);
+}
+.merkelapp.ok { color: var(--gronn); border-color: rgba(52, 211, 153, 0.4); }
+.merkelapp.feil { color: var(--rod); border-color: rgba(255, 77, 90, 0.4); }
+
+.hint { font-size: 12px; color: var(--tekst-svak); line-height: 1.5; }
+
+kbd {
+  font-family: ui-monospace, "SF Mono", Consolas, monospace;
+  font-size: 11px; padding: 2px 6px; border-radius: 5px;
+  background: var(--bg-3); border: 1px solid var(--line-sterk); color: var(--tekst);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 5px; border: 2px solid var(--bg); }
+::-webkit-scrollbar-thumb:hover { background: var(--line-sterk); }

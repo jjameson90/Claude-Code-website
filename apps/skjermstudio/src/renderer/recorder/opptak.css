@@ -1,0 +1,61 @@
+.layout { display: flex; flex-direction: column; height: 100%; }
+
+.topp {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 18px 22px 14px; border-bottom: 1px solid var(--line);
+}
+.topp .hint { margin: 4px 0 0; }
+
+.innhold {
+  flex: 1; display: grid; grid-template-columns: 1.15fr 1fr;
+  gap: 16px; padding: 16px 22px; overflow: auto; align-content: start;
+}
+.venstre, .hoyre { min-width: 0; }
+
+.filter { gap: 6px; margin-bottom: 12px; }
+.filter button { padding: 5px 12px; font-size: 12px; }
+
+.kildeliste {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 10px; max-height: 320px; overflow-y: auto; padding-right: 4px;
+}
+.kilde {
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+  background: var(--bg-3); cursor: pointer; transition: border-color 0.12s ease;
+}
+.kilde:hover { border-color: var(--line-sterk); }
+.kilde.valgt { border-color: var(--aksent); box-shadow: 0 0 0 1px var(--aksent); }
+.kilde img { width: 100%; height: 84px; object-fit: cover; display: block; background: #000; }
+.kilde .navn {
+  padding: 7px 9px; font-size: 11px; color: var(--tekst-svak);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.kilde.valgt .navn { color: var(--tekst); }
+
+.felt { margin-bottom: 16px; }
+.felt:last-child { margin-bottom: 0; }
+.felt .bryter { margin-bottom: 8px; }
+
+.bunn {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 22px; border-top: 1px solid var(--line); background: var(--bg-2);
+}
+.status { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--tekst-svak); }
+.prikk { width: 9px; height: 9px; border-radius: 50%; background: var(--tekst-svak); flex: none; }
+.prikk.tar-opp { background: var(--rod); animation: puls 1.4s ease-in-out infinite; }
+.prikk.pauset { background: var(--gul); }
+.tid { font-variant-numeric: tabular-nums; font-size: 15px; color: var(--tekst); }
+button.stor { padding: 11px 22px; font-size: 15px; }
+
+@keyframes puls { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+.siste { padding: 0 22px 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+.siste button { font-size: 12px; padding: 6px 11px; }
+
+.fremdrift {
+  position: fixed; inset: 0; background: rgba(10, 12, 16, 0.86);
+  display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+}
+.fremdrift.skjult { display: none; }
+.stolpe { height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden; margin-top: 14px; }
+.stolpe > div { height: 100%; width: 0; background: var(--aksent); transition: width 0.3s ease; }

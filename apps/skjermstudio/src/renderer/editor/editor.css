@@ -1,0 +1,97 @@
+.editor { display: flex; flex-direction: column; height: 100%; }
+
+.verktoylinje {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--bg-2);
+  flex: none;
+}
+.verktoylinje button { padding: 7px 12px; font-size: 13px; }
+.skille { width: 1px; height: 22px; background: var(--line); margin: 0 4px; }
+
+.hoveddel { flex: 1; display: flex; min-height: 0; }
+
+.scene { flex: 1; display: flex; flex-direction: column; min-width: 0; padding: 14px; gap: 12px; }
+
+.lerretsboks {
+  flex: 1; position: relative; display: flex; align-items: center; justify-content: center;
+  background: #07090c; border: 1px solid var(--line); border-radius: var(--radius-stor);
+  overflow: hidden; min-height: 0;
+}
+#lerret { max-width: 100%; max-height: 100%; display: block; background: #000; }
+
+.transport { display: flex; align-items: center; gap: 8px; flex: none; }
+.transport button { padding: 7px 12px; font-size: 13px; }
+.tidsvisning { font-variant-numeric: tabular-nums; color: var(--tekst-svak); margin-left: 8px; font-size: 13px; }
+
+/* Hjørneknappen som setter kameraet tilbake til rund boble */
+.hjornebryter {
+  position: absolute; top: 12px; left: 12px; width: 38px; height: 38px;
+  padding: 0; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(16, 18, 22, 0.85); border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+}
+.hjornebryter .ikon {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--tekst); display: block;
+}
+.hjornebryter:hover { background: rgba(30, 34, 42, 0.95); }
+.hjornebryter.skjult { display: none; }
+
+/* Beskjæringsverktøy */
+.beskjaer { position: absolute; inset: 0; }
+.beskjaer.skjult { display: none; }
+.beskjaer-rute { position: absolute; border: 2px solid var(--aksent); box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.55); cursor: move; }
+.hjorne { position: absolute; width: 12px; height: 12px; background: var(--aksent); border-radius: 2px; }
+.hjorne.nv { top: -7px; left: -7px; cursor: nwse-resize; }
+.hjorne.no { top: -7px; right: -7px; cursor: nesw-resize; }
+.hjorne.sv { bottom: -7px; left: -7px; cursor: nesw-resize; }
+.hjorne.so { bottom: -7px; right: -7px; cursor: nwse-resize; }
+
+/* Sidepanel */
+.panel {
+  width: 320px; flex: none; border-left: 1px solid var(--line);
+  background: var(--bg-2); display: flex; flex-direction: column; min-height: 0;
+}
+.faner { display: flex; border-bottom: 1px solid var(--line); flex: none; }
+.faner button {
+  flex: 1; border: none; border-radius: 0; background: transparent;
+  padding: 11px 6px; font-size: 12px; color: var(--tekst-svak);
+  border-bottom: 2px solid transparent;
+}
+.faner button:hover { background: var(--bg-3); }
+.faner button.aktiv { color: var(--tekst); border-bottom-color: var(--aksent); background: transparent; }
+
+.faneinnhold { padding: 16px; overflow-y: auto; flex: 1; }
+.faneinnhold.skjult { display: none; }
+.knapperad { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.knapperad button { font-size: 12px; padding: 7px 11px; }
+
+.liste { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.liste .element {
+  display: flex; align-items: center; gap: 8px; padding: 7px 10px;
+  background: var(--bg-3); border: 1px solid var(--line); border-radius: 8px; font-size: 12px;
+}
+.liste .element.valgt { border-color: var(--aksent); }
+.liste .element button { padding: 3px 8px; font-size: 11px; }
+.liste .element .tekst { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.liste .tom { color: var(--tekst-svak); font-size: 12px; padding: 4px 0; }
+
+/* Tidslinje */
+.tidslinjeboks {
+  flex: none; border-top: 1px solid var(--line); background: #12151b; padding: 0;
+}
+#tidslinje { width: 100%; display: block; }
+
+/* Kildevideoene brukes bare som bildekilde for lerretet */
+#skjermVideo, #kameraVideo {
+  position: fixed; width: 2px; height: 2px; opacity: 0.01; pointer-events: none;
+  left: -10px; top: -10px;
+}
+
+.modal {
+  position: fixed; inset: 0; background: rgba(8, 10, 13, 0.88);
+  display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); z-index: 50;
+}
+.modal.skjult { display: none; }
+.stolpe { height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden; margin-top: 14px; }
+.stolpe > div { height: 100%; width: 0; background: var(--aksent); transition: width 0.25s ease; }

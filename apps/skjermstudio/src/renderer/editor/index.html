@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: file:; media-src 'self' blob: file:; style-src 'self' 'unsafe-inline'" />
+  <title>Skjermstudio – redigering</title>
+  <link rel="stylesheet" href="../felles.css" />
+  <link rel="stylesheet" href="editor.css" />
+</head>
+<body>
+  <div class="editor">
+    <header class="verktoylinje">
+      <div class="rad">
+        <strong id="prosjektnavn">Uten navn</strong>
+        <span class="merkelapp" id="lengdeMerke"></span>
+      </div>
+      <div class="rad">
+        <button id="angre" title="Angre (Ctrl+Z)">Angre</button>
+        <button id="gjorOm" title="Gjør om (Ctrl+Shift+Z)">Gjør om</button>
+        <span class="skille"></span>
+        <button id="lagre" title="Lagre prosjekt (Ctrl+S)">Lagre</button>
+        <button id="visMappe" class="stille">Vis mappe</button>
+        <button id="eksporter" class="primar">Eksporter MP4</button>
+      </div>
+    </header>
+
+    <main class="hoveddel">
+      <section class="scene">
+        <div class="lerretsboks" id="lerretsboks">
+          <canvas id="lerret"></canvas>
+          <div class="beskjaer skjult" id="beskjaerLag">
+            <div class="beskjaer-rute" id="beskjaerRute">
+              <span class="hjorne nv"></span><span class="hjorne no"></span>
+              <span class="hjorne sv"></span><span class="hjorne so"></span>
+            </div>
+          </div>
+          <button class="hjornebryter skjult" id="hjornebryter" title="Tilbake til rund kameraboble">
+            <span class="ikon"></span>
+          </button>
+        </div>
+
+        <div class="transport">
+          <button id="tilStart" title="Til start">⏮</button>
+          <button id="forrigeStille" title="Forrige stille parti">◀ stille</button>
+          <button id="spill" class="primar" title="Mellomrom">Spill</button>
+          <button id="nesteStille" title="Neste stille parti">stille ▶</button>
+          <button id="tilSlutt" title="Til slutt">⏭</button>
+          <span class="tidsvisning"><span id="tidNa">0:00</span> / <span id="tidTotal">0:00</span></span>
+          <span class="mellomrom"></span>
+          <button id="zoomUt" class="stille">−</button>
+          <button id="zoomInn" class="stille">+</button>
+          <button id="zoomAlt" class="stille">Vis alt</button>
+        </div>
+      </section>
+
+      <aside class="panel" id="panel">
+        <nav class="faner">
+          <button class="aktiv" data-fane="klipp">Klipp</button>
+          <button data-fane="kamera">Kamera</button>
+          <button data-fane="palegg">Pålegg</button>
+          <button data-fane="eksport">Eksport</button>
+        </nav>
+
+        <div class="faneinnhold" data-innhold="klipp">
+          <h3>Markering</h3>
+          <p class="hint" id="valgInfo">Dra i lydbølgen for å markere et parti.</p>
+          <div class="knapperad">
+            <button id="klippValg" class="fare">Klipp bort markering</button>
+            <button id="nullstillValg" class="stille">Fjern markering</button>
+          </div>
+
+          <h3 style="margin-top:20px">Stillhet</h3>
+          <div class="felt">
+            <label>Terskel <span id="terskelVerdi">−35 dB</span></label>
+            <input type="range" id="terskel" min="-60" max="-15" value="-35" />
+          </div>
+          <div class="felt">
+            <label>Minste lengde <span id="minLengdeVerdi">0,7 s</span></label>
+            <input type="range" id="minLengde" min="2" max="40" value="7" />
+          </div>
+          <div class="knapperad">
+            <button id="analyserStillhet">Analyser på nytt</button>
+            <button id="fjernStillhet">Fjern alle stille partier</button>
+          </div>
+          <p class="hint" id="stillhetInfo"></p>
+
+          <h3 style="margin-top:20px">Bortklippet</h3>
+          <div id="klippliste" class="liste"></div>
+
+          <h3 style="margin-top:20px">Beskjæring</h3>
+          <div class="knapperad">
+            <button id="beskjaerPa">Beskjær bildet</button>
+            <button id="beskjaerAv" class="stille">Nullstill</button>
+          </div>
+          <p class="hint">Originalfilen endres aldri — beskjæringen brukes ved eksport.</p>
+        </div>
+
+        <div class="faneinnhold skjult" data-innhold="kamera">
+          <div id="kameraMangler" class="hint skjult">Dette opptaket har ikke noe kameraspor.</div>
+          <div id="kameraPanel">
+            <h3>Nøkkelpunkt ved spillehodet</h3>
+            <div class="felt">
+              <label>Vannrett <span id="kfXVerdi"></span></label>
+              <input type="range" id="kfX" min="0" max="100" value="85" />
+            </div>
+            <div class="felt">
+              <label>Loddrett <span id="kfYVerdi"></span></label>
+              <input type="range" id="kfY" min="0" max="100" value="80" />
+            </div>
+            <div class="felt">
+              <label>Størrelse <span id="kfStorrelseVerdi"></span></label>
+              <input type="range" id="kfStorrelse" min="8" max="60" value="28" />
+            </div>
+            <div class="felt">
+              <label>Visning</label>
+              <div class="knapperad">
+                <button id="modusBoble" class="aktiv">Rund boble</button>
+                <button id="modusFull">Fyll bildet</button>
+              </div>
+            </div>
+            <div class="knapperad">
+              <button id="settKeyframe" class="primar">Sett nøkkelpunkt her</button>
+              <button id="slettKeyframe" class="stille">Slett</button>
+            </div>
+            <div class="felt" style="margin-top:16px">
+              <label>Overgangslengde <span id="overgangVerdi">0,6 s</span></label>
+              <input type="range" id="overgang" min="1" max="20" value="6" />
+            </div>
+            <div class="knapperad">
+              <button id="forhandsvisOvergang">Forhåndsvis overgangen</button>
+            </div>
+            <h3 style="margin-top:20px">Nøkkelpunkter</h3>
+            <div id="keyframeliste" class="liste"></div>
+            <p class="hint">
+              Hjørneknappen oppe til venstre i forhåndsvisningen setter kameraet
+              tilbake til rund boble når det fyller bildet.
+            </p>
+          </div>
+        </div>
+
+        <div class="faneinnhold skjult" data-innhold="palegg">
+          <div class="knapperad">
+            <button id="leggTilBilde" class="primar">Legg til bilde</button>
+            <button id="leggTilTekst">Tekst</button>
+          </div>
+          <div class="knapperad">
+            <button id="leggTilPil">Pil</button>
+            <button id="leggTilMarkering">Markering</button>
+          </div>
+          <p class="hint">Nytt pålegg starter ved spillehodet og varer i 5 sekunder.</p>
+
+          <div id="paleggRedigering" class="skjult">
+            <h3 style="margin-top:20px">Valgt pålegg</h3>
+            <div class="felt" id="tekstFelt">
+              <label>Tekst</label>
+              <input type="text" id="paleggTekst" />
+            </div>
+            <div class="felt">
+              <label>Vannrett <span id="pxVerdi"></span></label>
+              <input type="range" id="px" min="0" max="100" value="10" />
+            </div>
+            <div class="felt">
+              <label>Loddrett <span id="pyVerdi"></span></label>
+              <input type="range" id="py" min="0" max="100" value="10" />
+            </div>
+            <div class="felt" id="storrelseFelt">
+              <label>Størrelse <span id="pStorrelseVerdi"></span></label>
+              <input type="range" id="pStorrelse" min="5" max="100" value="30" />
+            </div>
+            <div class="felt">
+              <label>Varighet <span id="pVarighetVerdi"></span></label>
+              <input type="range" id="pVarighet" min="5" max="600" value="50" />
+            </div>
+            <div class="knapperad">
+              <button id="slettPalegg" class="fare">Slett pålegg</button>
+            </div>
+          </div>
+
+          <h3 style="margin-top:20px">Alle pålegg</h3>
+          <div id="paleggliste" class="liste"></div>
+        </div>
+
+        <div class="faneinnhold skjult" data-innhold="eksport">
+          <div class="felt">
+            <label>Kvalitet (CRF, lavere = bedre) <span id="crfVerdi">20</span></label>
+            <input type="range" id="crf" min="14" max="30" value="20" />
+          </div>
+          <div class="felt">
+            <label>Bildefrekvens</label>
+            <select id="eksportFps">
+              <option value="24">24 bilder/s</option>
+              <option value="30" selected>30 bilder/s</option>
+              <option value="60">60 bilder/s</option>
+            </select>
+          </div>
+          <div class="felt">
+            <label>Filnavn</label>
+            <input type="text" id="eksportNavn" />
+          </div>
+          <div class="knapperad">
+            <button id="eksporter2" class="primar">Eksporter MP4</button>
+          </div>
+          <p class="hint">
+            Bildet spilles inn i sanntid mens lyden bygges direkte fra
+            originalopptaket. Til slutt låses lengden slik at lyd og bilde
+            treffer nøyaktig.
+          </p>
+          <div id="eksportlogg" class="liste"></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="tidslinjeboks">
+      <canvas id="tidslinje"></canvas>
+    </footer>
+  </div>
+
+  <video id="skjermVideo" preload="auto" playsinline></video>
+  <video id="kameraVideo" preload="auto" playsinline muted></video>
+
+  <div id="modal" class="modal skjult">
+    <div class="kort" style="min-width:420px">
+      <h2 id="modalTittel">Eksporterer …</h2>
+      <div class="stolpe"><div id="modalFyll"></div></div>
+      <p class="hint" id="modalTekst" style="margin-top:12px"></p>
+      <div class="knapperad" style="margin-top:14px; justify-content:flex-end">
+        <button id="modalKnapp" class="stille">Avbryt</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="editor.js"></script>
+</body>
+</html>

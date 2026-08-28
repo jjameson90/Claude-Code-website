@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+  <title>Opptaksindikator</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: transparent; overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      user-select: none; -webkit-app-region: no-drag; }
+    .pille {
+      display: flex; align-items: center; gap: 10px;
+      margin: 8px auto; width: fit-content; padding: 9px 16px;
+      background: rgba(16, 18, 22, 0.92); color: #e8ecf3;
+      border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 999px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5); font-size: 13px;
+      opacity: 0; transform: translateY(-8px); transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .pille.synlig { opacity: 1; transform: translateY(0); }
+    .prikk { width: 10px; height: 10px; border-radius: 50%; background: #ff4d5a; flex: none; }
+    .prikk.blinker { animation: puls 1.4s ease-in-out infinite; }
+    .prikk.pauset { background: #fbbf24; animation: none; }
+    .prikk.behandler { background: #4f8cff; animation: puls 1s ease-in-out infinite; }
+    @keyframes puls { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    .tid { font-variant-numeric: tabular-nums; font-weight: 600; letter-spacing: 0.02em; }
+    .tekst { color: #9aa4b5; font-size: 12px; }
+    kbd { font-size: 10px; padding: 1px 5px; border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.14); }
+  </style>
+</head>
+<body>
+  <div class="pille" id="pille">
+    <span class="prikk blinker" id="prikk"></span>
+    <span class="tid" id="tid">0:00</span>
+    <span class="tekst" id="tekst">tar opp</span>
+    <kbd id="hurtigtast"></kbd>
+  </div>
+  <script type="module" src="overlegg.js"></script>
+</body>
+</html>
